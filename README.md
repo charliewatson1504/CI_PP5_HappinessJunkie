@@ -1,108 +1,131 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Project Title
 
-Welcome USER_NAME,
+**???? Milestone Project**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Overview
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Main Mockup](#)
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[Link to live site](#)
 
 ---
 
-Happy coding!
+# Table of Contents
+
+- [UX](#UX)
+    - [Project Goals](#project-goals)
+    - [User Goals](#user-goals)
+    - [Site Owner Goals](#user-goals)
+    - [User Stories](#user-stories)
+    - [User Requirements and Expectations](#user-requirements-and-expectations)
+
+- [Design Choices](#design-choices)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
+    - [Wireframes](#wireframes)
+    - [Technologies Used](#technologies-used)
+    - [Features](#features)
+- [Validation](#validation)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credit](#credit)
+- [Acknowledgements](#acknowledgements)
+# UX
+
+## Project Goals
+
+### Primary goals of the website for site users are as follows:
+
+- To register for an account on the website and receive an email after successful registration
+- To login or logout from the website
+- To recover my password in case it is forgotten
+- To have a personalised user profile with showing booked classes
+- To post a comment on a blog post
+- To view website news, and comment on a news item
+
+### Primary goals of the website for the site owners are as follows:
+
+- To add, edit and delete PT sessions
+- To add, edit and delete website news and events information
+
+## User Stories
+
+### User
+1. As a **User** I can ** ** so that ** **
+
+# Design Choices
+
+## Colors
+
+![Colour Pallette](#)
+## Fonts
+
+## Wireframes
+The wireframes for the site were created in Figma and are linked below for Desktop, Tablet and Mobile devices.
+### Homepage
+1. <details><summary>Desktop</summary><img src="#"></details>
+2. <details><summary>Tablet</summary><img src="#"></details>
+3. <details><summary>Mobile</summary><img src="#"></details>
+
+# Technologies Used
+## Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+## Frameworks, libraries and other tools
+- [Git](https://git-scm.com/)
+Used for version control of the site and push code from VScode to Github
+- [Github](https://github.com/)
+Used as the remote repository to store the code. Github pages is also where the live site is hosted.
+- [Visual Studio Code](https://code.visualstudio.com/)
+Used as the IDE for writing the code and file management
+
+# Features
+This site has ?? pages with ?? features
+## Feature 1 - Home Page
+The homepage has ?? main sections to it:
+
+### Section 1 -
+
+![Feature 1 Section 1](#)
+
+### User Stories covered by this feature
+3- As a First Time Visitor
+
+# Validation
+## HTML Validation
+[W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
+1. <details><summary>Homepage</summary><img src="#"></details>
+
+## CSS Validation
+[W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the site. The stylesheet.css file returned with 0 errors. When running on the whole page it returned with 17 errors all of which can be attributed to Bootstrap v5.0. See below link to screenshot:
+1. <details><summary>Whole Page</summary><img src="#"></details>
+
+2. <details><summary>CSS Stylesheet</summary><img src="#"></details>
+
+## Accessibility Validation
+[WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>Homepage</summary><img src="#"></details>
+
+## Performance
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to measure each pages performance. Click on the below to see each screenshot: 
+1. <details><summary>Homepage</summary><img src="#"></details>
+
+# Testing of User Stories
+### 1. As a First Time Visitor
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+
+<details><summary>Screenshot to show user story test</summary><img src="#"></details>
+
+# Bugs
+- Bug:
+- Fix:
+
+# Deployment
+
+5. You will now have a copy of the repository in you local version
+# Credit
+
+# Acknowledgements
