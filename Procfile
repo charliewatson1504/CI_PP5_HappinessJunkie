@@ -1,1 +1,1 @@
-web: gunicorn happiness_junkike.wsgi
+web: gunicorn happiness_junkie.wsgi
