@@ -4,6 +4,7 @@
 	Table of Contents
 	1. Global Styles
 	2. NavBar
+    3. Footer
 ****************************/
 
 /* 1. Global Styles */
@@ -30,9 +31,41 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: 'Abril Fatface', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 /* 2. NavBar */
 /* navbar component has been built using bootstrap but has been given custom styling to fit in with the sites aesthetic */
+
+.navbar {
+    background-color: white;
+}
+
+.navbar-toggler i {
+    color: var(--clr-dark);
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-toggler.show {
+        display: inline;
+    }
+}
+
+#delivery-banner {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+/* 3. Footer */
