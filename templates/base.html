@@ -50,16 +50,6 @@
                     <img src="{% static 'logo.jpeg' %}" alt="" width="100px" height="100px">
                 </a>
 
-                <button>
-                    <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </button>
-                <button>
-                    <a href="#">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -93,12 +83,74 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
+                <button>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </button>
             </div>
         </nav>
     </header>
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <a href="#">
+                        <img src="{% static 'logo.jpeg' %}" alt="" width="70px" height="70px">
+                        <p>Happiness Junkie is the creative side hustle of a hairstylist and mom of two. I make foil
+                            prints, stickers and knits!</p>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <h1>WEBSITE</h1>
+                            <a href="#">Prints</a>
+                            <a href="#">Stickers</a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h1>ACCOUNT</h1>
+                            <a href="#">Prints</a>
+                            <a href="#">Stickers</a>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <h1>FIND US ON SOCIAL</h1>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h1>NEWSLETTER</h1>
+                            <p>Sign up for a weekly newsletter for updates on our latest items</p>
+                            <form class="row">
+                                <div class="col-9">
+                                    <input type="email" class="form-control" id="inputEmail"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="col-3">
+                                    <button type="submit" class="btn btn-primary">SIGNUP</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- <hr> -->
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
