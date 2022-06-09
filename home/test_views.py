@@ -6,6 +6,7 @@ from django.test import TestCase
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
 class TestIndexView(TestCase):
     """
     Class for testing views in home app
