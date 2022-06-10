@@ -1,0 +1,22 @@
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+        "name": "knits",
+        "friendly_name": "Knits"
+    }
+}, {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+        "name": "foil_prints",
+        "friendly_name": "Foil Prints"
+    }
+}, {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+        "name": "stickers",
+        "friendly_name": "Stickers"
+    }
+}]

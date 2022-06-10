@@ -1,0 +1,614 @@
+[
+    {
+        "pk": "1",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8002098972",
+            "name": "adult_pebble_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! This will fit an adult and teen. Might be a bit big for tween kids. Smaller sizes available.\nThis gorgeous headband is in the colour Pebble and is a beautiful array of natural colours.\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "10",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_cce1c911-373c-4f08-bcf0-f32b6be0268f.jpg?v=1612972925",
+            "image": "image_cce1c911-373c-4f08-bcf0-f32b6be0268f.jpg"
+        }
+    },
+    {
+        "pk": "2",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8011738906",
+            "name": "child_pebble_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys!\nThis gorgeous headband is in the colour Pebble and is a beautiful array of natural colours.\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "8",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_cce1c911-373c-4f08-bcf0-f32b6be0268f.jpg?v=1612972926",
+            "image": "image_cce1c911-373c-4f08-bcf0-f32b6be0268f.jpg"
+        }
+    },
+    {
+        "pk": "3",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8021779886",
+            "name": "adult_recycled_aran_yarn_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! This will fit an adult and teen. Might be a bit big for tween kids. Smaller sizes available.\u00a0\nThis headband is made out of recycled yarn! It feels slightly less soft than regular yarn but it has wonderful colourful speckles all though out. There are also many colours so please get in touch of you would like a different colour. I'll be adding more colours as they are requested.\nPlease note: Each band will differ slightly due to the yarn and tension. Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "10",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_fee4b472-1de4-4c2e-960e-044b1b82b1c0.jpg?v=1612972505",
+            "image": "image_fee4b472-1de4-4c2e-960e-044b1b82b1c0.jpg"
+        }
+    },
+    {
+        "pk": "4",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8033502823",
+            "name": "child_recycled_aran_yarn_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys!\nThis headband is made out of recycled yarn! It feels slightly less soft than regular yarn but it has wonderful colourful speckles all though out. There are also many colours so please get in touch of you would like a different colour. I'll be adding more colours as they are requested.\nPlease note: Each band will differ slightly due to the yarn and tension. Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "8",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_e7da40b0-92e1-40ef-876d-afb66c7e3bc0.png?v=1612972507",
+            "image": "image_e7da40b0-92e1-40ef-876d-afb66c7e3bc0.png"
+        }
+    },
+    {
+        "pk": "5",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8041451125",
+            "name": "adult_80s_inspired_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! This will fit an adult and teen. Might be a bit big for tween kids. Smaller sizes available.\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "10",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_08b5c363-05ac-4c30-a2b0-f227d50fc35a.jpg?v=1612971456",
+            "image": "image_08b5c363-05ac-4c30-a2b0-f227d50fc35a.jpg"
+        }
+    },
+    {
+        "pk": "6",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8053251523",
+            "name": "child_80s_inspired_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! \nIf you would like to place a custom order please message me!\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "8",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_08b5c363-05ac-4c30-a2b0-f227d50fc35a.jpg?v=1612971456",
+            "image": "image_08b5c363-05ac-4c30-a2b0-f227d50fc35a.jpg"
+        }
+    },
+    {
+        "pk": "7",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8069367152",
+            "name": "adult_80s_inspired_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! This will fit an adult and teen. Might be a bit big for tween kids. Smaller sizes available. \nIf you would like to order something more custom please let me know.\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "10",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_f6fdef03-68f2-4fc7-9e4d-fd7ab21a95f1.jpg?v=1612970286",
+            "image": "image_f6fdef03-68f2-4fc7-9e4d-fd7ab21a95f1.jpg"
+        }
+    },
+    {
+        "pk": "8",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8075320531",
+            "name": "child_80s_inspired_headband",
+            "description": "It's like a hat but not! It's really wide and so cosy! If you want to love a beanie hat but they just don't suit you try one of these bad boys! \nIf you would like to order something more custom please let me know.\nPlease note: Each band will differ slightly due to the yarn and tension but that fun, bright look will still be there! Also colours may differ due to screen brightness and monitors the product is viewed on.",
+            "price": "8",
+            "category": "1",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_f6fdef03-68f2-4fc7-9e4d-fd7ab21a95f1.jpg?v=1612970286",
+            "image": "image_f6fdef03-68f2-4fc7-9e4d-fd7ab21a95f1.jpg"
+        }
+    },
+    {
+        "pk": "9",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8085086213",
+            "name": "happy_plants_sticker_sheet",
+            "description": "This cute sticker sheet is approximately 4.5\u009dby 6.5 big and has 24 cute catcus/succulent stickers and one quote sticker all together.\u00a0\nPerfect for planners, journals and scrapbooks. *These stickers are not laminated or waterproof.",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_659eb207-d5bd-459e-aebd-85b33d37fc7e.jpg?v=1610392877",
+            "image": "image_659eb207-d5bd-459e-aebd-85b33d37fc7e.jpg"
+        }
+    },
+    {
+        "pk": "10",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8099044605",
+            "name": "alien_sticker_pack",
+            "description": "Aliens and Dinos and spaceships oh my! What are you going to stick these bad boys in? Scrapbook or journal? These are large stickers coming in at 6cm each at their widest point!",
+            "price": "3",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_1d64fe6d-b524-4072-8971-e44a2accad46.jpg?v=1609789766",
+            "image": "image_1d64fe6d-b524-4072-8971-e44a2accad46.jpg"
+        }
+    },
+    {
+        "pk": "11",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8107561288",
+            "name": "creepy_valentines_sticker_pack",
+            "description": "Boys tears and love repellent! What else does a creepy Valentines sticker pack need? These stickers are large at 6cm each and great for scrapbooks and diaries!",
+            "price": "3",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_d32490a0-d066-49b8-a23d-0d52bf4a555a.jpg?v=1609789365",
+            "image": "image_d32490a0-d066-49b8-a23d-0d52bf4a555a.jpg"
+        }
+    },
+    {
+        "pk": "12",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8114781069",
+            "name": "crystal_mystic_sticker_pack",
+            "description": "October, crystals, witchy things...that's why this sticker pack is perfect! There are a huge 32 stickers in this pack. Perfect for journaling and planners!",
+            "price": "2.2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_a66ee413-6051-4562-8af9-6ed2af0f6698.jpg?v=1609762646",
+            "image": "image_a66ee413-6051-4562-8af9-6ed2af0f6698.jpg"
+        }
+    },
+    {
+        "pk": "13",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8120280029",
+            "name": "witchy_sticker_pack",
+            "description": "This giant sticker pack has 34 stickers in total! From witchy items to witchy animals and crystals it's perfect for any lover of all things witchy! Great for planners and diaries.",
+            "price": "2.2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_0e4f2b28-cdde-40cb-9ac1-2b7dfc8aa44a.jpg?v=1609762160",
+            "image": "image_0e4f2b28-cdde-40cb-9ac1-2b7dfc8aa44a.jpg"
+        }
+    },
+    {
+        "pk": "14",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8132409871",
+            "name": "star_sign_foil_prints",
+            "description": "These stunning foil prints come in A4 size and you can choose from a wide range of foil colours. You can also choose from black or white card. So which star sign are you?",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_a9aebe67-39bc-4afb-b694-5ec0fc081a94.jpg?v=1606079665",
+            "image": "image_a9aebe67-39bc-4afb-b694-5ec0fc081a94.jpg"
+        }
+    },
+    {
+        "pk": "15",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8143365223",
+            "name": "gothic_christmas_sticker_pack",
+            "description": "This super cute yet creepy Christmas sticker pack comes printed on kraft paper or white sticker paper! Great for journals and scrapbooks!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "TRUE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_b02d3684-7c0a-4b5d-a126-69b3d84934a6.jpg?v=1606078107",
+            "image": "image_b02d3684-7c0a-4b5d-a126-69b3d84934a6.jpg"
+        }
+    },
+    {
+        "pk": "16",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8152417237",
+            "name": "durable_holographic_shell_pearl_sticker",
+            "description": "This little beauty was drawn by myself so I'm very proud of this little sticker! I asked, you voted and so I decided to have it made into a\u00a0durable sticker suitable for sticking on cars, water bottles and anything else you could think of! They will last\u00a02-4 years, are weatherproof withstanding everything from sunny days to rain and storms.\nAll the profits I make from this little sticker will go into designing and producing the next sticker and so on! I hope to fund all future durable stickers this way!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_2a0dac93-5028-4ebe-8195-4f3b22363e5c.jpg?v=1601893587",
+            "image": "image_2a0dac93-5028-4ebe-8195-4f3b22363e5c.jpg"
+        }
+    },
+    {
+        "pk": "17",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8166535415",
+            "name": "large_zodiac_stickers",
+            "description": "Which star sign are you?! I'm Aquarius! These stickers are large and laminated for extra protection! Great to jazz up your phone case!",
+            "price": "0.8",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "TRUE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_71c6e121-7afe-44fd-9d06-7096f2ca180a.jpg?v=1600089305",
+            "image": "image_71c6e121-7afe-44fd-9d06-7096f2ca180a.jpg"
+        }
+    },
+    {
+        "pk": "18",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8172870571",
+            "name": "space_walker_single_sticker",
+            "description": "I love space, astronauts, the moon and everything else up there! This sticker is 2.5 wide by 3 high and comes printed on normal water resistant sticker paper or laminated for extra longevity!",
+            "price": "0.5",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_7cc99767-71d0-4628-8431-af63f6fc4b66.jpg?v=1600009976",
+            "image": "image_7cc99767-71d0-4628-8431-af63f6fc4b66.jpg"
+        }
+    },
+    {
+        "pk": "19",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8181878378",
+            "name": "the_humble_bumblebee_kraft_paper_sticker_pack",
+            "description": "Oh man! Nothing brings me more joy than this little guy right here! Comes in a pack of 3 stickers.",
+            "price": "0.5",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_9f559444-b48b-406f-aa54-51d3c4ce7d2d.jpg?v=1600009489",
+            "image": "image_9f559444-b48b-406f-aa54-51d3c4ce7d2d.jpg"
+        }
+    },
+    {
+        "pk": "20",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8192916334",
+            "name": "sunflower_kraft_paper_sticker_pack",
+            "description": "These beautiful kraft paper stickers are just too sweet! There are 11 stickers of various sizes in these packs. Great for planners, bullet journaling and more!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_730e5698-015c-4bae-8051-1eba8ed954fd.jpg?v=1600008890",
+            "image": "image_730e5698-015c-4bae-8051-1eba8ed954fd.jpg"
+        }
+    },
+    {
+        "pk": "21",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8202735496",
+            "name": "sassy_kraft_paper_sticker_pack",
+            "description": "If you're a bit sassy with a touch of sarcasm and sometimes find it a bit too peopley\u009doutside\u009dthen this 13 piece kraft paper sticker pack is for you!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_68c7d351-8009-4aee-9fb3-ee7cab29d151.jpg?v=1600008439",
+            "image": "image_68c7d351-8009-4aee-9fb3-ee7cab29d151.jpg"
+        }
+    },
+    {
+        "pk": "22",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8212610706",
+            "name": "coffee_kraft_paper_sticker_pack",
+            "description": "I LOVE COFFEE! If you do then this little 16 piece collection is for you! Perfect for planners, scrapbooking and more!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_2ea68fc0-7d4b-469b-a2b2-103297507b99.jpg?v=1600008065",
+            "image": "image_2ea68fc0-7d4b-469b-a2b2-103297507b99.jpg"
+        }
+    },
+    {
+        "pk": "23",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8226321666",
+            "name": "green_witch_sticker_pack",
+            "description": "If you're like me you love all things witchy! And if you love all things witchy, you'll love this 23 kraft paper sticker collection! Perfect for planner, diaries etc. These stickers are printed on white sticker paper. They are also available on kraft sticker paper!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_e2437027-f3d2-4738-b9e9-a09eab1b2c0f.jpg?v=1600007532",
+            "image": "image_e2437027-f3d2-4738-b9e9-a09eab1b2c0f.jpg"
+        }
+    },
+    {
+        "pk": "24",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8233803604",
+            "name": "green_witch_kraft_paper_sticker_pack",
+            "description": "If you're like me you love all things witchy! And if you love all things witchy, you'll love this 23 kraft paper sticker collection! Perfect for planner, diaries etc. These stickers feel amazing as they are printed on kraft sticker paper!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_459eed91-18a1-4954-a893-be596291db02.jpg?v=1600007203",
+            "image": "image_459eed91-18a1-4954-a893-be596291db02.jpg"
+        }
+    },
+    {
+        "pk": "25",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8240591983",
+            "name": "creepy_pastel_sticker_pack",
+            "description": "These little creepy beauties are just to die for! They are water resistant and can be laminated for extra longevity!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_7c446f91-b111-4671-8379-3200ed1c5672.jpg?v=1599826184",
+            "image": "image_7c446f91-b111-4671-8379-3200ed1c5672.jpg"
+        }
+    },
+    {
+        "pk": "26",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8252021762",
+            "name": "female_power_sticker_pack",
+            "description": "This lovely pack come with 19 beautiful stickers, perfect for your planner or journal! These lovely ladies are water resistant but please don't stick them to a water bottle! They might perish in the dishwasher!\u00a0",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_b2cf8508-a78f-45da-a89c-837306f7136d.jpg?v=1599825505",
+            "image": "image_b2cf8508-a78f-45da-a89c-837306f7136d.jpg"
+        }
+    },
+    {
+        "pk": "27",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8264717869",
+            "name": "magical_unicorn_sticker_pack",
+            "description": "This creepy unicorn pack comes with 18 stickers no bigger than 5cm each. They are perfect for jazzing up your diary, planner or anything else you want to stick these to! They are water resistant but not waterproof so don't bath these unicorns!",
+            "price": "2",
+            "category": "3",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/image_2936b066-c78a-492e-902b-8f9fca8e478d.jpg?v=1599824777",
+            "image": "image_2936b066-c78a-492e-902b-8f9fca8e478d.jpg"
+        }
+    },
+    {
+        "pk": "28",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8279531182",
+            "name": "thoughts_become_things_foil_print",
+            "description": "Are you familiar with the idea that thoughts become a reality? If you believe in something strongly enough they will! Choose from a range of foil colours.\n*Please note the frame is not for sale.",
+            "price": "8",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "TRUE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "FALSE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2371587228_s8f5.jpg?v=1606081946",
+            "image": "il_fullxfull.2371587228_s8f5.jpg"
+        }
+    },
+    {
+        "pk": "29",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8287063663",
+            "name": "holographic_pearl_foil_print",
+            "description": "This stunning piece is an original drawing by myself! And the foil is mesmerising! You can choose what colour foil you'd like and choose from black or white card. \n*Please note the frame is not for sale and the black card gives the foil a textured appearance while the white card gives the foil a smooth finish.",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2419199525_rqxw.jpg?v=1597177506",
+            "image": "il_fullxfull.2419199525_rqxw.jpg"
+        }
+    },
+    {
+        "pk": "30",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8296640041",
+            "name": "ironman_quote_foil_print",
+            "description": "In this house we LOVE Ironman so it only seemed fitting that I do a quote from our favourite film. Have it in all gold or red and gold! Ironman pez not included. Choose from white or black card.\n*Please note the frame is not for sale and the black card gives the foil a textured appearance while the white card gives the foil a smooth finish.",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2419208197_mj87.jpg?v=1597178164",
+            "image": "il_fullxfull.2419208197_mj87.jpg"
+        }
+    },
+    {
+        "pk": "31",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8304032463",
+            "name": "success_foil_print",
+            "description": "Success does indeed breed success! Choose from a range of foils and black or white card. \n*Please note frame not for sale. The black card gives the foil a textured look and the white card gives the foil a smooth finish.",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2419217355_3ak4.jpg?v=1597181867",
+            "image": "il_fullxfull.2419217355_3ak4.jpg"
+        }
+    },
+    {
+        "pk": "32",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8317447561",
+            "name": "outlander_quote_foil_print",
+            "description": "Dinna Fash and buy this print! Choose from a  range of foil colours. Available on black or white card. \n*Please note the frame is not for sale and the black card gives the foil a textured appearance while the white card gives the foil a smooth finish.",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2419235573_1za5.jpg?v=1597181767",
+            "image": "il_fullxfull.2419235573_1za5.jpg"
+        }
+    },
+    {
+        "pk": "33",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8326648721",
+            "name": "bathroom_foil_print",
+            "description": "Jazz up your downstairs loo or your bathroom with this cheeky foil print!\nAvailable on black or white card and you can choose from a range of foil colours and fonts.\n*Please note: you are purchasing the print only. Also due to the nature of the medium some small discrepancies may be visible.",
+            "price": "9",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "FALSE",
+            "has_foil_print_card_color": "TRUE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2371663644_47r6.jpg?v=1597177299",
+            "image": "il_fullxfull.2371663644_47r6.jpg"
+        }
+    },
+    {
+        "pk": "34",
+        "model": "products.product",
+        "fields": {
+            "sku": "hj8330100535",
+            "name": "kitchen_foil_print",
+            "description": "Who doesn't like a cuppa T? Choose from a range of foil colours. \n*Please note the frame is not for sale.",
+            "price": "6",
+            "category": "2",
+            "has_sticker_finish": "FALSE",
+            "has_zodiac_style": "FALSE",
+            "has_foil_print_finish": "TRUE",
+            "has_foil_print_card_color": "FALSE",
+            "has_foil_print_color": "TRUE",
+            "image_url": "https://cdn.shopify.com/s/files/1/0367/8286/6565/products/il_fullxfull.2419303769_f297.jpg?v=1606084980",
+            "image": "il_fullxfull.2419303769_f297.jpg"
+        }
+    }
+]
