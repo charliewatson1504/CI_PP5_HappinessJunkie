@@ -9,3 +9,4 @@ node_modules/
 cloudinary_python.txt
 *.vscode
 *.sqlite3
+.vscode/settings.json
