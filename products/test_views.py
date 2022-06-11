@@ -38,3 +38,10 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
+
+    def test_search_empty_query(self):
+        """
+        Tests searching without entering a query
+        """
+        response = self.client.get('/products/', {'q': ''})
+        self.assertRedirects(response, '/products/')

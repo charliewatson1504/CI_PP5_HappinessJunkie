@@ -84,8 +84,9 @@
                     </ul>
                 </div>
                 <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarSearch">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+                        <input class="form-control me-2" type="search" name="q" placeholder="Search your happiness"
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
