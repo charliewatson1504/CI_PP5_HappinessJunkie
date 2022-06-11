@@ -5,9 +5,11 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 # Internal:
 from .models import Category, Product
+from .forms import ProductForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -89,3 +91,36 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_product(request):
+    """
+    Adds a product to the site
+
+    Args:
+        request (_type_): _description_
+    """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Apologies but only store owner accounts can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(
+                request, 'You have successfully created a new product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Product creation failed. Please check form is valid.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
