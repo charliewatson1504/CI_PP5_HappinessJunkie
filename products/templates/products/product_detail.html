@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ product.friendly_name }}</h1>
+<img src="{{ product.image_url }}" alt="" width="100px" height="100px">
+
+
+{% endblock %}

@@ -67,6 +67,6 @@ class TestProductViews(TestCase):
         Tests getting the product detail page for selected product
         """
         product = Product.objects.get()
-        response = self.client.get('/products/{product.id}')
+        response = self.client.get(f'/products/{product.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/product_detail.html')

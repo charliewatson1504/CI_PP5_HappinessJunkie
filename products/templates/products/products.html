@@ -5,7 +5,9 @@
 
 <h1>Products</h1>
 {% for product in products %}
-<div class="card">{{ product.friendly_name }}</div>
+<a href="{% url 'product_detail' product.id %}">
+    <div class="card">{{ product.friendly_name }}</div>
+</a>
 {% endfor %}
 
 {% endblock %}
