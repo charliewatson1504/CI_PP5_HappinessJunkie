@@ -1,7 +1,7 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.contrib import messages
 from django.db.models import Q
@@ -70,3 +70,22 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def product_detail(request, product_id):
+    """
+    View to show product detail page for selected product
+
+    Args:
+        request (object): HTTP request object
+        product_id: Product ID
+    Returns:
+        Render of the product detail page
+    """
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)
