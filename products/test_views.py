@@ -50,6 +50,6 @@ class TestProductViews(TestCase):
         """
         Test seraching for a product
         """
-        response = self.client.get('/products/,' {'q': 'test_product'})
+        response = self.client.get('/products/', {'q': 'test product'})
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')

@@ -4,6 +4,7 @@
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.contrib import messages
+from django.db.models import Q
 
 # Internal:
 from .models import Product
@@ -29,6 +30,9 @@ def all_products(request):
             if not query:
                 messages.error(request, "No search terms were entered!")
                 return redirect(reverse('products'))
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
+            products = products.filter(queries)
 
     context = {
         'products': products,
