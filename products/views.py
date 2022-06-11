@@ -1,8 +1,9 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import render
-
+from django.shortcuts import redirect, render
+from django.urls import reverse
+from django.contrib import messages
 
 # Internal:
 from .models import Product
@@ -20,9 +21,18 @@ def all_products(request):
     """
 
     products = Product.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "No search terms were entered!")
+                return redirect(reverse('products'))
 
     context = {
         'products': products,
+        'search_term': query,
     }
 
     return render(request, 'products/products.html', context)
