@@ -45,3 +45,11 @@ class TestProductViews(TestCase):
         """
         response = self.client.get('/products/', {'q': ''})
         self.assertRedirects(response, '/products/')
+
+    def test_product_search(self):
+        """
+        Test seraching for a product
+        """
+        response = self.client.get('/products/,' {'q': 'test_product'})
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/products.html')
