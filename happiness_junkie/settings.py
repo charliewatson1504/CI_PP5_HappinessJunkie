@@ -48,6 +48,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
+
+    # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'happiness_junkie.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
