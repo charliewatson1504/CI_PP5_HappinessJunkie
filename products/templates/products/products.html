@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Products</h1>
+    {% for product in products %}
+        <div class="card">
+            {{ product.friendly_name }}
+        </div>
+    {% end for %}
+{% endblock %}
