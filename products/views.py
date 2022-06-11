@@ -23,6 +23,9 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    categories = None
+    sort = None
+    direction = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -57,7 +60,7 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        current_sorting = f'{sort}_{direction}'
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,

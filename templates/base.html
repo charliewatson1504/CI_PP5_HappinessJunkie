@@ -64,10 +64,23 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="productsDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Products
+                                All Products
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="productsDropdown">
                                 <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price
+                                        <i class="fa-solid fa-arrow-up-right"></i></a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price
+                                        <i class="fa-solid fa-arrow-down-right"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="productsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
                                 <li><a class="dropdown-item" href="{% url 'products' %}?category=knits">Knits</a></li>
                                 <li><a class="dropdown-item" href="{% url 'products' %}?category=foil_prints">Foil
                                         Prints</a></li>
