@@ -53,3 +53,11 @@ class TestProductViews(TestCase):
         response = self.client.get('/products/', {'q': 'test product'})
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'products/products.html')
+
+    def test_products_in_category_search(self):
+        """
+        Test searching for a category and returning all products in category
+        """
+        response = self.client.get('/products/', {'category': 'knits'})
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'products/products.html')

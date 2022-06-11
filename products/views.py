@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.db.models import Q
 
 # Internal:
-from .models import Product
+from .models import Category, Product
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -33,6 +33,15 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
+
+        if 'category' in request.GET:
+
+            # not use currently as categories not split but available for
+            # future store enhancements
+            categories = request.GET['category'].split(',')
+
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     context = {
         'products': products,
