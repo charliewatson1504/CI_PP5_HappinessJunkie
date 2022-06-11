@@ -16,7 +16,7 @@ class TestProductModels(TestCase):
 
     def setUp(self):
         """
-        This creates a test user, product and category
+        This creates a test product and category
         """
 
         Category.objects.create(
@@ -34,7 +34,7 @@ class TestProductModels(TestCase):
 
     def tearDown(self):
         """
-        This deletes the test user, product and category
+        This deletes the test product and category
         """
         Category.objects.all().delete()
         Product.objects.all().delete()
