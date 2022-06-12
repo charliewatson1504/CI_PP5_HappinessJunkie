@@ -3,6 +3,7 @@
 # 3rd party:
 from django.test import TestCase
 from django.contrib.auth.models import User
+from django.contrib.messages import get_messages
 
 # Internal:
 from .models import Product
@@ -91,3 +92,13 @@ class TestProductViews(TestCase):
             'has_sticker_finish': False,
         })
         self.assertRedirects(response, '/products/2/')
+
+    def test_add_product_as_standard_user(self):
+        """
+        Tests a non superuser trying to add product
+        """
+        self.client.login(username='test_user', password='test_password')
+        response = self.client.get('/products/add/')
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(
+            str(messages[0]), 'Apologies but only store owner accounts can do that.')
