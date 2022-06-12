@@ -1,6 +1,7 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
+from urllib import response
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
@@ -138,3 +139,16 @@ class TestProductViews(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(
             str(messages[0]), 'Apologies but only store owner accounts can do that.')
+
+    def test_delete_product(self):
+        """
+        Tests trying to delete a product
+        """
+        self.client.login(username='test_superuser', password="test_password")
+        product = Product.objects.get()
+        deleted_product = Product.objects.filter(id=product.id)
+        self.assertEqual(len(deleted_product), 0)
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(str(messages[0]),
+                         'Product has been successfully removed!')
+        self.assertRedirects(response, '/products/')
