@@ -80,7 +80,7 @@ class TestProductViews(TestCase):
 
     def test_add_product(self):
         """
-        Tests adding a product 
+        Tests adding a product
         """
         self.client.login(username='test_superuser', password="test_password")
         response = self.client.post('/products/add/', {
@@ -102,3 +102,22 @@ class TestProductViews(TestCase):
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(
             str(messages[0]), 'Apologies but only store owner accounts can do that.')
+
+    def test_edit_product(self):
+        """
+        Tests trying to edit a product
+        """
+        self.client.login(username='test_superuser', password="test_password")
+        product = Product.objects.get()
+        response = self.client.post(f'/products/edit/{product.id}', {
+            'name': 'test_product_updated',
+            'friendly_name': 'Test Product updated',
+            'price': '15',
+            'description': 'This is a test description that has been updated',
+        })
+        updated_product = Product.objects.get()
+        self.assertTemplateUsed(response, 'products/edit_product.html')
+        self.assertEqual(updated_product.friendly_name, 'Test Product updated')
+        self.assertEqual(updated_product.price, 15)
+        self.assertEqual(updated_product.description,
+                         'This is a test description that has been updated')
