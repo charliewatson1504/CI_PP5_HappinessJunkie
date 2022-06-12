@@ -64,4 +64,4 @@ class TestCartViews(TestCase):
         messages = list(get_messages(response.wsgi_request))
         product_id = cart[str(product.id)]
         self.assertEqual(
-            str(messages[0]), 'Updated Test Product quantity to' + str(product.id))
+            str(messages[0]), 'Updated Test Product quantity to' + str(product_id))
