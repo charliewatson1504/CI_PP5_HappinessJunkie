@@ -99,7 +99,9 @@ def add_product(request):
     Adds a product to the site
 
     Args:
-        request (_type_): _description_
+        request (object): HTTP request object
+    Returns:
+        Render of add product page
     """
     if not request.user.is_superuser:
         messages.error(
@@ -122,5 +124,44 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def edit_product(request, product_id):
+    """
+    Allows a superuser to edit a product
+
+    Args:
+        request (object): HTTP request object
+        product_id: Product ID
+    Returns:
+        Render of edit product page
+    """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Apologies but only store owner accounts can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            product = form.save()
+            messages.success(
+                request, 'You have successfully updated the product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Product update failed. Please check form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(reuqest, f'You are updating {product.friendly_name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
     }
     return render(request, template, context)
