@@ -47,13 +47,7 @@ class Product(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    has_sticker_finish = models.BooleanField(
-        default=False, null=True, blank=True)
     has_zodiac_style = models.BooleanField(
-        default=False, null=True, blank=True)
-    has_foil_print_finish = models.BooleanField(
-        default=False, null=True, blank=True)
-    has_foil_print_card_color = models.BooleanField(
         default=False, null=True, blank=True)
     has_foil_print_color = models.BooleanField(
         default=False, null=True, blank=True)

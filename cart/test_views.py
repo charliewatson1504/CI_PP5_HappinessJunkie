@@ -40,9 +40,9 @@ class TestCartViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'cart/cart.html')
 
-    def test_add_item_to_cart_no_variation(self):
+    def test_add_item_to_cart(self):
         """
-        Test adding a product to the cart that has no variations
+        Test adding an item to the cart that has no variations
         """
         product = Product.objects.get(sku='HJ8001234567')
         response = self.client.post(
