@@ -75,11 +75,11 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="productsDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" id="categoriesDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                                 <li><a class="dropdown-item" href="{% url 'products' %}?category=knits">Knits</a></li>
                                 <li><a class="dropdown-item" href="{% url 'products' %}?category=foil_prints">Foil
                                         Prints</a></li>
@@ -96,12 +96,35 @@
                         <button class="btn btn-outline-success btn-search" type="submit">Search</button>
                     </form>
                 </div>
-                <button class="navbar-toggler show order-1 order-lg-3">
-                    <a href="{% url 'account_login' %}">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAccount"
+                    aria-controls="navbarAccount" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-user"></i>
                 </button>
-                <button class="navbar-toggler show order-2 order-lg-4">
+                <div class="collapse navbar-collapse order-2 order-lg-3" id="navbarAccount">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="accountDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                My Account
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new product</a></li>
+                                    {% endif %}
+                                    <li><a class="dropdown-item" href="">Profile & Order History</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
+                                {% endif %}
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler show order-1 order-lg-4">
                     <a href="{% url 'cart' %}">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
