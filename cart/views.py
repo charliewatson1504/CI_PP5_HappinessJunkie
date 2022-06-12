@@ -52,7 +52,7 @@ def add_product_to_cart(request, item_id):
                 cart[item_id]['item_by_zodiac_style'] += quantity
                 messages.success(
                     request,
-                    f'Updated {zodiac_style} {product.friendly_name} quantity to {cart[item_id]['item_by_zodiac_style'][zodiac_style]}')
+                    f'Updated {zodiac_style} {product.friendly_name} quantity to {cart[item_id]["item_by_zodiac_style"][zodiac_style]}')
             else:
                 cart[item_id]['item_by_zodiac_style'][zodiac_style] = quantity
                 messages.success(
@@ -67,7 +67,7 @@ def add_product_to_cart(request, item_id):
                 cart[item_id]['item_by_foil_print_color'] += quantity
                 messages.success(
                     request,
-                    f'Updated {foil_print_color} {product.friendly_name} quantity to {cart[item_id]['item_by_foil_print_color'][foil_print_color]}')
+                    f'Updated {foil_print_color} {product.friendly_name} quantity to {cart[item_id]["item_by_foil_print_color"][foil_print_color]}')
             else:
                 cart[item_id]['item_by_foil_print_color'][foil_print_color] = quantity
                 messages.success(
