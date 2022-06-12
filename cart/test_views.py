@@ -20,6 +20,7 @@ class TestCartViews(TestCase):
         """
         Product.objects.create(
             name='test_product',
+            friendly_name='Test Product',
             price='10',
             sku='HJ8001234567',
             description='This is a test product',
@@ -45,8 +46,8 @@ class TestCartViews(TestCase):
         """
         product = Product.objects.get(sku='HJ8001234567')
         response = self.client.post(
-            f'/cart/add/{product.id}/', {"quantity": 1, "redirect_url": "view_cart"})
+            f'/cart/add/{product.id}/', {"quantity": 1, "redirect_url": "cart"})
         cart = self.client.session['cart']
-        self.assertEqual(car[str(product.id)], 1)
+        self.assertEqual(cart[str(product.id)], 1)
         messages = list(get_messages(response.wsgi_request))
-        self.assertEqual(str(messages[0]), 'Added to your cart!')
+        self.assertEqual(str(messages[0]), 'Added Test Product to your cart!')
