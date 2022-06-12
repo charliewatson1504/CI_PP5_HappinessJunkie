@@ -18,10 +18,10 @@ class TestCartViews(TestCase):
         Creates a test product
         """
         Product.objects.create(
-            name='test_product'
-            price='10'
-            sku='HJ8001234567'
-            description='This is a test product'
+            name='test_product',
+            price='10',
+            sku='HJ8001234567',
+            description='This is a test product',
         )
 
     def tearDown(self):
