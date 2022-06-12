@@ -51,3 +51,17 @@ class TestCartViews(TestCase):
         self.assertEqual(cart[str(product.id)], 1)
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(str(messages[0]), 'Added Test Product to your cart!')
+
+    def test_adjust_cart_quantity(self):
+        """
+        Tests updating cart quantity
+        """
+        product = Product.objects.get(sku='HJ8001234567')
+        response = self.client.post(
+            f'/cart/adjust/{product.id}/', {'quantity': 2})
+        cart = self.client.session['cart']
+        self.assertEqual(cart[str(product.id)], 2)
+        messages = list(get_messages(response.wsgi_request))
+        product_id = cart[str(product.id)]
+        self.assertEqual(
+            str(messages[0]), 'Updated Test Product quantity to' + str(product.id))
