@@ -122,3 +122,19 @@ class TestProductViews(TestCase):
         self.assertEqual(updated_product.price, 15)
         self.assertEqual(updated_product.description,
                          'This is a test description that has been updated')
+
+    def test_edit_product_as_standard_user(self):
+        """
+        Tests a non superuser trying to edit a product
+        """
+        self.client.login(username='test_user', password='test_password')
+        product = Product.objects.get()
+        response = self.client.post(f'/products/edit/{product.id}/', {
+            'name': 'test_product_updated',
+            'friendly_name': 'Test Product updated',
+            'price': '15',
+            'description': 'This is a test description that has been updated',
+        })
+        messages = list(get_messages(response.wsgi_request))
+        self.assertEqual(
+            str(messages[0]), 'Apologies but only store owner accounts can do that.')
