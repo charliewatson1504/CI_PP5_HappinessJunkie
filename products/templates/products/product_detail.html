@@ -5,6 +5,9 @@
 
 <h1>{{ product.friendly_name }}</h1>
 <img src="{{ product.image_url }}" alt="" width="100px" height="100px">
-
+{% if request.user.is_superuser %}
+    <a href="{% url 'edit_product' product.id %}">edit product</a>
+    <a href="{% url 'delete_product' product.id %}">delete product</a>
+{% endif %}
 
 {% endblock %}
