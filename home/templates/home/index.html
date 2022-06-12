@@ -2,12 +2,16 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid">
-    <div id="hero">
+<div class="container-fluid" id="hero-section">
+    <div>
         <h1>HAPPINESS JUNKIE</h1>
         <p>FIND YOUR HAPPY</p>
-        <a href="{% url 'products' %}">SHOP</a>
+        <a href="{% url 'products' %}" class="btn btn-custom">SHOP</a>
     </div>
-
+</div>
+<div class="container-fluid" id="blog-section">
+    <div>
+        <h1>BLOG</h1>
+    </div>
 </div>
 {% endblock %}

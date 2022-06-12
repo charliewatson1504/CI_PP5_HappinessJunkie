@@ -4,7 +4,9 @@
 	Table of Contents
 	1. Global Styles
 	2. NavBar
-    3. Footer
+    3. Buttons
+    4. Home Page
+    5. Footer
 ****************************/
 
 /* 1. Global Styles */
@@ -68,7 +70,74 @@ a {
     color: var(--clr-light);
 }
 
-/* 3. Footer */
+/* 3. Buttons */
+
+.btn-custom {
+    font-size: 5vw;
+    background-color: var(--clr-accent-dark);
+    border-radius: 10%;
+    color: var(--clr-light);
+    padding: 0.5em 1.5em;
+    border: 1.75px solid var(--clr-light);
+}
+
+.btn-search {
+    color: var(--clr-accent-dark);
+    border-color: var(--clr-accent-dark);
+}
+
+.btn-search:hover {
+    background-color: var(--clr-accent-dark);
+    border-color: var(--clr-accent-dark);
+    color: var(--clr-light);
+}
+
+/* 4. Home page */
+
+#hero-section {
+    background: url(/static/img/hero_image.jpg) no-repeat center;
+    background-size: cover;
+    width: 100vw;
+    height: 350px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+
+#hero-section div {
+    color: var(--clr-light);
+}
+
+#hero-section div h1 {
+    font-size: 9vw;
+}
+
+#hero-section div p {
+    font-size: 5vw;
+}
+
+
+#hero-section div a {
+    content: '\00bb';
+}
+
+#blog-section {
+    width: 100vw;
+    height: 350px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+
+/* 5. Footer */
 
 footer p,
 footer a {
