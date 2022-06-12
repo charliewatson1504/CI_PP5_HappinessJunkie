@@ -109,14 +109,15 @@ class TestProductViews(TestCase):
         """
         self.client.login(username='test_superuser', password="test_password")
         product = Product.objects.get()
-        response = self.client.post(f'/products/edit/{product.id}', {
+        response_get = self.client.get(f'/products/edit/{product.id}/')
+        response_post = self.client.post(f'/products/edit/{product.id}/', {
             'name': 'test_product_updated',
             'friendly_name': 'Test Product updated',
             'price': '15',
             'description': 'This is a test description that has been updated',
         })
         updated_product = Product.objects.get()
-        self.assertTemplateUsed(response, 'products/edit_product.html')
+        self.assertTemplateUsed(response_get, 'products/edit_product.html')
         self.assertEqual(updated_product.friendly_name, 'Test Product updated')
         self.assertEqual(updated_product.price, 15)
         self.assertEqual(updated_product.description,
