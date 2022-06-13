@@ -55,78 +55,83 @@
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            {% if product.has_zodiac_style %}
-                                <div class="col-12">
-                                    <p><strong>Zodiac Style:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_zodiac_style" id='id_product_zodiac_style'>
-                                        <option value="cancer">Cancer</option>
-                                        <option value="sagittarius">Sagittarius</option>
-                                        <option value="capricorn" selected>Capricorn</option>
-                                        <option value="pisces" selected>Pisces</option>
-                                        <option value="aquarius">Aquarius</option>
-                                        <option value="virgo">Virgo</option>
-                                        <option value="gemini">Gemini</option>
-                                        <option value="taurus">Taurus</option>
-                                        <option value="scorpio">Scorpio</option>
-                                        <option value="aries">Aries</option>
-                                        <option value="libra">Libra</option>
-                                        <option value="leo">Leo</option>
-                                    </select>
-                                </div>
-                            {% elif product.has_foil_print_color %}
-                            <div class="col-12">
-                                <p><strong>Foil Print Color:</strong></p>
-                                <select class="form-control rounded-0 w-50" name="product_foil_print_color" id='id_product_foil_print_color'>
-                                    <option value="gold">Gold</option>
-                                    <option value="satin_gold">Satin Gold</option>
-                                    <option value="silver" selected>Silver</option>
-                                    <option value="satin_silver">Satin Silver</option>
-                                    <option value="red">Red</option>
-                                    <option value="green">Green</option>
-                                    <option value="blue">Blue</option>
-                                    <option value="purple">Purple</option>
-                                    <option value="rose_gold">Rose Gold</option>
-                                    <option value="copper">Copper</option>
-                                    <option value="holographic">Holographic</option>
-                                </select>
-                            </div>
-                            {% endif %}
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group input-group-{{ product.id }}">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}" 
-                                                data-item_id="{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
+                            {% with product.has_zodiac_style as z %}
+                                {% if z %}
+                                    <div class="col-12">
+                                        <p><strong>Zodiac Style:</strong></p>
+                                        <select class="form-control rounded-0 w-50" name="product_zodiac_style" id='id_product_zodiac_style'>
+                                            <option value="cancer">Cancer</option>
+                                            <option value="sagittarius">Sagittarius</option>
+                                            <option value="capricorn" selected>Capricorn</option>
+                                            <option value="pisces" selected>Pisces</option>
+                                            <option value="aquarius">Aquarius</option>
+                                            <option value="virgo">Virgo</option>
+                                            <option value="gemini">Gemini</option>
+                                            <option value="taurus">Taurus</option>
+                                            <option value="scorpio">Scorpio</option>
+                                            <option value="aries">Aries</option>
+                                            <option value="libra">Libra</option>
+                                            <option value="leo">Leo</option>
+                                        </select>
+                                    </div>
+                                {% endif %}
+                                {% with product.has_foil_print_color as f %}
+                                    {% if f %}
+                                        <div class="col-12">
+                                            <p><strong>Foil Print Color:</strong></p>
+                                            <select class="form-control rounded-0 w-50" name="product_foil_print_color" id='id_product_foil_print_color'>
+                                                <option value="gold">Gold</option>
+                                                <option value="satin_gold">Satin Gold</option>
+                                                <option value="silver" selected>Silver</option>
+                                                <option value="satin_silver">Satin Silver</option>
+                                                <option value="red">Red</option>
+                                                <option value="green">Green</option>
+                                                <option value="blue">Blue</option>
+                                                <option value="purple">Purple</option>
+                                                <option value="rose_gold">Rose Gold</option>
+                                                <option value="copper">Copper</option>
+                                                <option value="holographic">Holographic</option>
+                                            </select>
                                         </div>
-                                        <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
-                                                data-item_id="{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
+                                    {% endif %}
+                                    <div class="col-12">
+                                        <p class="mt-3"><strong>Quantity:</strong></p>
+                                        <div class="form-group w-50">
+                                            <div class="input-group input-group-{{ product.id }}">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}" 
+                                                        data-item_id="{{ product.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-minus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
+                                                    name="quantity" value="1" min="1" max="99"
+                                                    data-item_id="{{ product.id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
+                                                        data-item_id="{{ product.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-plus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn btn-custom text-uppercase mt-5" value="Add to Cart">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <div class="col{% if s %}-12 mt-2{% endif %}">
+                                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                        <input type="submit" class="btn btn-custom text-uppercase mt-5" value="Add to Cart">
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                {% endwith %}
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
