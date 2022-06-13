@@ -5,8 +5,9 @@
 	1. Global Styles
 	2. NavBar
     3. Buttons
-    4. Home Page
-    5. Footer
+    4. Bootstrap toasts
+    5. Home Page
+    6. Footer
 ****************************/
 
 /* 1. Global Styles */
@@ -96,7 +97,24 @@ a {
     cursor: pointer;
 }
 
-/* 4. Home page */
+/* 4. Bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* 5. Home page */
 
 #hero-section {
     background: url(/static/img/hero_image.jpg) no-repeat center;
@@ -141,7 +159,7 @@ a {
     margin: auto 0;
 }
 
-/* 5. Footer */
+/* 6. Footer */
 
 footer p,
 footer a {
