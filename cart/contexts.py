@@ -60,19 +60,19 @@ def cart_contents(request):
                     })
 
     if total < settings.FREE_SHIPPING_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        shipping = total * Decimal(settings.STANDARD_SHIPPING_PERCENTAGE / 100)
         free_shipping_delta = settings.FREE_SHIPPING_THRESHOLD - total
     else:
-        delivery = 0
+        shipping = 0
         free_shipping_delta = 0
 
-    grand_total = delivery + total
+    grand_total = shipping + total
 
     context = {
         'cart_items': cart_items,
         'total': total,
         'product_count': product_count,
-        'delivery': delivery,
+        'shipping': shipping,
         'free_shipping_delta': free_shipping_delta,
         'free_shipping_threshold': settings.FREE_SHIPPING_THRESHOLD,
         'grand_total': grand_total,
