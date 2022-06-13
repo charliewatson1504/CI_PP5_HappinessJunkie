@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% load bag_tools %}
+{% load cart_tools %}
 
 {% block content %}
     <div class="container">
@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div class="col-7">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0"><strong>{{ item.product.friendly_name }}</strong></p>
                             <p class="my-0 small">
                                 {% if item.product.has_zodiac_style %}
                                     Zodiac Sign: {{ item.zodiac_style }}
@@ -98,4 +98,4 @@
             </div>
         </div>
     </div>
-    
+{% endblock %}    
