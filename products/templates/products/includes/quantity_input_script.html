@@ -1,0 +1,86 @@
+<script type="text/javascript">
+
+    /* 
+    * Disable +/- buttons outside 1-99 range.
+    * If no zodiac style or foil print color is passed to the function, the parameter will have a value of undefined by default,
+    * which prevents any errors 
+    */
+    function handleEnableDisable(itemId, zodiac_style, foil_print_color) {
+        if (zodiac_style) {
+            var currentValue = parseInt($(`.zodiac_style_${itemId}_${zodiac_style}`).val());
+        } else if (foil_print_color) {
+            var currentValue = parseInt($(`.foil_print_color_${itemId}_${foil_print_color}`).val());
+        } else {
+            var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+        }
+
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
+
+        if (zodiac_style) {
+            $(`.decrement-zodiac_style_${itemId}_${zodiac_style}`).prop('disabled', minusDisabled);
+            $(`.increment-zodiac_style_${itemId}_${zodiac_style}`).prop('disabled', plusDisabled);
+        } else if (size) {
+            $(`.decrement-foil_print_color_${itemId}_${foil_print_color}`).prop('disabled', minusDisabled);
+            $(`.increment-foil_print_color_${itemId}_${foil_print_color}`).prop('disabled', plusDisabled);
+        } else {
+            $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+            $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
+        }
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        var zodiac_style = $(allQtyInputs[i]).data('zodiac_style');
+        var foil_print_color = $(allQtyInputs[i]).data('foil_print_color');
+        handleEnableDisable(itemId, zodiac_style, foil_print_color);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        var zodiac_style = $(this).data('zodiac_style');
+        var foil_print_color = $(this).data('foil_print_color');
+        handleEnableDisable(itemId, zodiac_style, foil_print_color);
+    });
+
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+       e.preventDefault();
+       var itemId = $(this).data('item_id');
+       var zodiac_style = $(this).data('zodiac_style');
+       var foil_print_color = $(this).data('foil_print_color');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       if (zodiac_style) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-zodiac_style='${zodiac_style}']`);
+       } else if (foil_print_color) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-foil_print_color='${foil_print_color}']`);
+       } else {
+          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+       }
+       var currentValue = parseInt($(closestInput).val());
+       $(allQuantityInputs).val(currentValue + 1);
+       handleEnableDisable(itemId, zodiac_style, foil_print_color);
+    });
+
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+       e.preventDefault();
+       var itemId = $(this).data('item_id');
+       var zodiac_style = $(this).data('zodiac_style');
+       var foil_print_color = $(this).data('foil_print_color');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       if (zodiac_style) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-zodiac_style='${zodiac_style}']`);
+       } else if (foil_print_color) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-foil_print_color='${foil_print_color}']`);
+       } else {
+          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+       }
+       var currentValue = parseInt($(closestInput).val());
+       $(allQuantityInputs).val(currentValue - 1);
+       handleEnableDisable(itemId, zodiac_style, foil_print_color);
+    });
+</script>
