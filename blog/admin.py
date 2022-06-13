@@ -1,3 +1,38 @@
+# Imports
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from django.contrib import admin
 
-# Register your models here.
+
+# Internal:
+from .models import Post, Comment
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+class PostAdmin(admin.ModelAdmin):
+    """
+    Admin class for post model
+    """
+    list_display = (
+        'title',
+        'status',
+        'created_on',
+    )
+    ordering = (
+        '-created_on,'
+    )
+
+
+class CommentAdmin(admin.ModelAdmin):
+    """
+    Admin class for comment model
+    """
+    list_display = (
+        'name',
+        'post',
+        'created_on',
+        'approved',
+    )
+
+
+admin.site.register(Post, Comment)
