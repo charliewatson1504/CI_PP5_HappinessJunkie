@@ -1,3 +1,5 @@
+{% load static %}
+
 <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
@@ -48,5 +50,5 @@
         </div>
     </div>
 </form>
-<a class="update-link text-info"><small>Update</small></a>
-<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_zodiac_style="{{ item.foil_zodiac_style }}" data-product_foil_print_color="{{ item.foil_print_color }}"><small>Remove</small></a>
+<a class="update-link text-info pointer"><small>Update</small></a>
+<a class="remove-item text-danger float-right pointer" id="remove_{{ item.item_id }}" data-product_zodiac_style="{{ item.foil_zodiac_style }}" data-product_foil_print_color="{{ item.foil_print_color }}"><small>Remove</small></a>
