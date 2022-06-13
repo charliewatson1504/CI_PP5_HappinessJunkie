@@ -7,9 +7,9 @@ from django.contrib import messages
 from django.shortcuts import redirect, reverse, render
 
 # Internal:
+from products.models import Product
 from .forms import OrderForm
 from .models import OrderLineItem
-from products.models import Product
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
