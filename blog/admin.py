@@ -18,9 +18,7 @@ class PostAdmin(admin.ModelAdmin):
         'status',
         'created_on',
     )
-    ordering = (
-        '-created_on,'
-    )
+    ordering = ('-created_on',)
 
 
 class CommentAdmin(admin.ModelAdmin):
@@ -35,4 +33,5 @@ class CommentAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Post, Comment)
+admin.site.register(Post, PostAdmin)
+admin.site.register(Comment, CommentAdmin)
