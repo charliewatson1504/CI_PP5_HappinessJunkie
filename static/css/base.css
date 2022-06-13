@@ -73,11 +73,11 @@ a {
 /* 3. Buttons */
 
 .btn-custom {
-    font-size: 5vw;
+    font-size: 1rem;
     background-color: var(--clr-accent-dark);
-    border-radius: 10%;
+    border-radius: 0;
     color: var(--clr-light);
-    padding: 0.5em 1.5em;
+    padding: 0.5em 1em;
     border: 1.75px solid var(--clr-light);
 }
 
@@ -90,6 +90,10 @@ a {
     background-color: var(--clr-accent-dark);
     border-color: var(--clr-accent-dark);
     color: var(--clr-light);
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 /* 4. Home page */
