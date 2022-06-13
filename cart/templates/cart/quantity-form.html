@@ -1,0 +1,52 @@
+<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group input-group-{{ item.item_id }}">
+            <div class="input-group-prepend">
+                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }} 
+                    {% if item.zodiac_style %}
+                        decrement-zodiac_style_{{ item.item_id }}_{{ item.zodiac_style }}
+                    {% elif item.foil_print_color%}
+                        decrement-foil_print_color_{{ item.item_id }}_{{ item.foil_print_color }}
+                    {% endif %}" 
+                    data-item_id="{{ item.item_id }}" 
+                    data-zodiac_style="{{ item.zodiac_style }}"
+                    data-foil_print_color="{{ item.foil_print_color }}">
+                    <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }} 
+                {% if item.zodiac_style %}
+                    zodiac_style_{{ item.item_id }}_{{ item.zodiac_style }}
+                {% elif item.foil_print_color %}
+                    foil_print_color_{{ item.item_id }}_{{ item.foil_print_color }}
+                {% endif %}" type="number"
+                name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                data-item_id="{{ item.item_id }}" 
+                data-zodiac_style="{{ item.zodiac_style }}"
+                data-foil_print_color="{{ item.foil_print_color }}">
+            <div class="input-group-append">
+                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }} 
+                    {% if item.size %}
+                        increment-zodiac_style_{{ item.item_id }}_{{ item.zodiac_style }}
+                    {% elif item.foil_print_color%}
+                        increment-foil_print_color_{{ item.item_id }}_{{ item.foil_print_color }}
+                    {% endif %}"
+                    data-item_id="{{ item.item_id }}" data-zodiac_style="{{ item.zodiac_style }}" data-foil_print_color="{{ item.foil_print_color }}">
+                    <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                </button>
+            </div>
+            {% if item.product.zodiac_style %}
+                <input type="hidden" name="product_zodiac_style" value="{{ item.zodiac_style }}">
+            {% elif item.product.has_foil_print_color %}
+                <input type="hidden" name="product_foil_print_color" value="{{ item.foil_print_color }}">
+            {% endif %}
+        </div>
+    </div>
+</form>
+<a class="update-link text-info"><small>Update</small></a>
+<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_zodiac_style="{{ item.foil_zodiac_style }}" data-product_foil_print_color="{{ item.foil_print_color }}"><small>Remove</small></a>
