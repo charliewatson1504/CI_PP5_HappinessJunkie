@@ -10,5 +10,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.PostList, name='blog'),
+    path('', views.all_posts, name='blog'),
 ]

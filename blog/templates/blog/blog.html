@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Updates</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in posts %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    <img class="card-img-top" src=" {{ post.image }}">
+                                </div>
+                                <a href="" class="post-link">
+                                    <h2 class="card-title">{{ post.title }}</h2>
+                                </a>
+                                <p class="card-text text-muted h6">
+                                    {{ post.created_on}}
+                                    <i class="far fa-heart"></i>
+                                    {{ post.number_of_likes }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="row">
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
