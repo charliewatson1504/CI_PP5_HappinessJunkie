@@ -4,6 +4,15 @@
 
 ## Project Overview
 
+Happiness Junkie is an ecommerce store for a business that sells handmade knits, stickers and foil prints. It has been developed as part of the code institute diploma in full stack software development and is the 5th project of the course.
+
+2 user accounts have been set up:
+
+- An admin user account has been set up with username = charlie and password = admin123
+- A standard user account has been set up with username = johnsmith and password = User123!
+- Making a payment as a user, a test credit card of 4242424242424242 has been set up for the card number
+- The expiry date, cvc and postal code/state code can use any mix of numbers but must meet the minimum amount for it to work
+
 ![Main Mockup](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/mockup/main_mockup.png)
 
 [Link to live site](https://happiness-junkie.herokuapp.com/)
@@ -12,25 +21,30 @@
 
 # Table of Contents
 
-- [UX](#UX)
-    - [Project Goals](#project-goals)
-    - [User Goals](#user-goals)
-    - [Site Owner Goals](#user-goals)
-    - [User Stories](#user-stories)
-    - [User Requirements and Expectations](#user-requirements-and-expectations)
-
+- [UX](#ux)
+  * [Project Goals](#project-goals)
+    + [Primary goals of the website for site users are as follows:](#primary-goals-of-the-website-for-site-users-are-as-follows-)
+    + [Primary goals of the website for the site owners are as follows:](#primary-goals-of-the-website-for-the-site-owners-are-as-follows-)
+  * [User Stories](#user-stories)
 - [Design Choices](#design-choices)
-    - [Colors](#colors)
-    - [Fonts](#fonts)
-    - [Wireframes](#wireframes)
-    - [Technologies Used](#technologies-used)
-    - [Features](#features)
-- [Validation](#validation)
+  * [Colors](#colors)
+  * [Fonts](#fonts)
+  * [Database](#database)
+    + [Physical database model](#physical-database-model)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks, libraries and other tools](#frameworks--libraries-and-other-tools)
 - [Testing](#testing)
-- [Bugs](#bugs)
 - [Deployment](#deployment)
+  * [Creating an Application with Heroku](#creating-an-application-with-heroku)
+    + [Heroku Settings](#heroku-settings)
+    + [Heroku Deployment](#heroku-deployment)
 - [Credit](#credit)
 - [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 # UX
 
 ## Project Goals
