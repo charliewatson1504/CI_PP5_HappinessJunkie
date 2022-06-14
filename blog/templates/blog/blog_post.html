@@ -1,4 +1,5 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <div class="masthead">
@@ -26,7 +27,7 @@
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_blog_post' post.id %}">Edit</a> | 
-                        <a class="text-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal">Delete</a>
+                        <a class="text-danger pointer" data-bs-toggle="modal" data-bs-target="#deletePostModal">Delete</a>
                     </small>
                     <div class="modal fade" id="deletePostModal" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
@@ -40,7 +41,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{% url 'delete_post' post.id %}"></a><button type="button" class="btn btn-danger">Delete</button>
+                              <a href="{% url 'delete_blog_post' post.id %}"></a><button type="button" class="btn btn-danger">Delete</button>
                             </div>
                           </div>
                         </div>

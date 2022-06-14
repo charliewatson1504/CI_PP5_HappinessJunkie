@@ -102,7 +102,7 @@ def edit_blog_post(request):
 
 
 @login_required
-def delete_post(request, post_id):
+def delete_blog_post(request, post_id):
     """
     Deletes the blog post
     """
@@ -111,7 +111,7 @@ def delete_post(request, post_id):
             request, 'Apologies, only store owners can delete a post.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Post, pk=postt_id)
+    product = get_object_or_404(Post, pk=post_id)
     product.delete()
     messages.success(request, 'Post has been successfully removed!')
 
