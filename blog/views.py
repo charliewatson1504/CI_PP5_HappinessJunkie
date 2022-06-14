@@ -74,7 +74,8 @@ def edit_blog_post(request):
     Allows editing of a blog post by a superuser
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Apologies, only store owners can add a post.')
+        messages.error(
+            request, 'Apologies, only store owners can edit a post.')
         return redirect(reverse('blog'))
 
     post = get_object_or_404(Post, pk=post_id)
@@ -98,3 +99,20 @@ def edit_blog_post(request):
         'post': post,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_post(request, post_id):
+    """
+    Deletes the blog post
+    """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Apologies, only store owners can delete a post.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Post, pk=postt_id)
+    product.delete()
+    messages.success(request, 'Post has been successfully removed!')
+
+    return redirect(reverse('blog'))
