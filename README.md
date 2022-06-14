@@ -116,7 +116,7 @@ I have used Roboto as the body text and Abril Fatface for the headers. Both font
 ### Physical database model
 The below diagram shows all of the fields stored in the database, with details of their data types, and how it is structured.
 
-![Database]()
+![Database](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/database-model/database_models.png)
 
 # Technologies Used
 ## Languages
@@ -129,49 +129,22 @@ Used for version control of the site and push code from VScode to Github
 Used as the remote repository to store the code. Github pages is also where the live site is hosted.
 - [Visual Studio Code](https://code.visualstudio.com/)
 Used as the IDE for writing the code and file management
+- [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html)
+Used to edit and crop all image sizes on the site as original filesize were too large and affected performance
+- [Google Fonts](https://fonts.google.com/)
+Used for Spectral font throughout the site
+- [Font Awesome](https://fontawesome.com/)
+Used for various icons throughout the site
+- [Bootstrap](https://getbootstrap.com/)
+Used for creating a responsive navigation bar used in every header of each page. Also used for creting a modal for a booking form used on each page. Modals were used for services page in which an accordion was created using bootstrap for each service category. Bootstrap also used for creating a carousel for the review section
+- [jQuery](https://jquery.com/)
+Used for cleaner JavaScript code where necessary and datepicker function for booking form
+- [Google Maps](https://www.google.com/maps)
 
-# Features
-This site has ?? pages with ?? features
-## Feature 1 - Home Page
-The homepage has ?? main sections to it:
 
-### Section 1 -
+# Testing
 
-![Feature 1 Section 1](#)
 
-### User Stories covered by this feature
-3- As a First Time Visitor
-
-# Validation
-## HTML Validation
-[W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
-1. <details><summary>Homepage</summary><img src="#"></details>
-
-## CSS Validation
-[W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the site. The stylesheet.css file returned with 0 errors. When running on the whole page it returned with 17 errors all of which can be attributed to Bootstrap v5.0. See below link to screenshot:
-1. <details><summary>Whole Page</summary><img src="#"></details>
-
-2. <details><summary>CSS Stylesheet</summary><img src="#"></details>
-
-## Accessibility Validation
-[WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors. Click on the below to see each screenshot:
-1. <details><summary>Homepage</summary><img src="#"></details>
-
-## Performance
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to measure each pages performance. Click on the below to see each screenshot: 
-1. <details><summary>Homepage</summary><img src="#"></details>
-
-# Testing of User Stories
-### 1. As a First Time Visitor
-
-|Feature|Action|Expected Result|Actual Result|
-|---|---|---|---| 
-
-<details><summary>Screenshot to show user story test</summary><img src="#"></details>
-
-# Bugs
-- Bug:
-- Fix:
 
 # Deployment
 
