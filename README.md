@@ -1,12 +1,12 @@
 # Project Title
 
-**???? Milestone Project**
+**CI_PP5_Happiness Junkie**
 
 ## Project Overview
 
-![Main Mockup](#)
+![Main Mockup](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/mockup/main_mockup.png)
 
-[Link to live site](#)
+[Link to live site](https://happiness-junkie.herokuapp.com/)
 
 ---
 
@@ -144,11 +144,44 @@ Used for cleaner JavaScript code where necessary and datepicker function for boo
 
 # Testing
 
+I started the project with completing test driven development and saw a real benefit to it however due to time constraints I was unable to continue. Below is the coverage report for the test that have been written:
 
+![cover_report](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/coverage_report.png)
 
 # Deployment
+## Creating an Application with Heroku
 
-5. You will now have a copy of the repository in you local version
+*Code Institute* tutorial and [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) were followed to complete deployment.
+
+- Enter following command in the terminal so that the relevant files needed for Heroku to install your project dependencies are created - `pip3 freeze --local > requirements.txt`. A `Procfile` is also required that specifies the commands that are executed by the app on startup.
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in or create and account if you do not already have one.
+2. Click the `New` dropdown and select `Create New App`.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+### Heroku Settings
+Environment Variables need to be set up - this is key to make sure your application is deployed properly.
+- In the resources tab install 'Heroku Postgres'
+- In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - SECRET_KEY - your chosen key
+
+
+### Heroku Deployment
+In the Deploy tab:
+1. Connect your Heroku account to your Github Repository following these steps:
+    1. Click the `Deploy` tab then `Github-Connect to Github`.
+    2. Enter GitHub repository name and click `Search`.
+    3. Choose the correct repository and click `Connect`.
+2. Choose to deploy the project manually whilst getting deployment correct. Automatic deployment can be set after and will generate a new application every time you push a change to Github.
+3. Click `Deploy Branch` your application will be built and once complete click `open app` to view deployed application.
+
 # Credit
+- Bootstrap for the following components: navbar, modals
+- Colormind for creating the colour pallette
+- YouTube for many tutorial videos on different javascript aspects.
+- w3school and mdn web docs for a great resource when stuck with how to get a specific piece of javascript code to work.
+- stackoverflow for various issues along the way
 
 # Acknowledgements
+My family for supporting throughout this process
