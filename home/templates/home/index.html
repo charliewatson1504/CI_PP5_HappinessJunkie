@@ -9,9 +9,13 @@
         <a href="{% url 'products' %}" class="btn btn-custom">SHOP</a>
     </div>
 </div>
-<div class="container-fluid" id="blog-section">
-    <div>
-        <h1>BLOG</h1>
+<div class="container" id="blog-section">
+    <div class="row">
+        <div class="card col-10 offset-1 my-2 py-2">
+            <h1>Whats New!</h1>
+            <p>Click below to see our latest blog posts</p>
+            <a href="{% url 'blog' %}" class="btn btn-custom w-50 mx-auto">Have a look</a>
+        </div>
     </div>
 </div>
 {% endblock %}
