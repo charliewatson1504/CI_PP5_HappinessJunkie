@@ -40,89 +40,95 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
-                    aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-
-                <a class="navbar-brand me-0 me-lg-1" href="#">
-                    <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto">
-                </a>
-
-                <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">All Products</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="categoriesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Categories
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-1">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+                                aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+            
+                            <a class="navbar-brand me-0 me-lg-1" href="#">
+                                <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto">
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                                <li><a class="dropdown-item" href="{% url 'products' %}?category=knits">Knits</a></li>
-                                <li><a class="dropdown-item" href="{% url 'products' %}?category=foil_prints">Foil
-                                        Prints</a></li>
-                                <li><a class="dropdown-item" href="{% url 'products' %}?category=stickers">Stickers</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            
+                            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'products' %}">All Products</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="categoriesDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Categories
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=knits">Knits</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=foil_prints">Foil
+                                                    Prints</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=stickers">Stickers</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarSearch">
+                                <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+                                    <input class="form-control me-2" type="search" name="q" placeholder="Search your happiness"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success btn-search" type="submit">Search</button>
+                                </form>
+                            </div>
+            
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAccount"
+                                aria-controls="navbarAccount" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                            <div class="collapse navbar-collapse order-2 order-lg-3" id="navbarAccount">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="accountDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            My Account
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                                            {% if request.user.is_authenticated %}
+                                                {% if request.user.is_superuser %}
+                                                    <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new product</a></li>
+                                                {% endif %}
+                                                <li><a class="dropdown-item" href="{% url 'profile' %}">Profile & Order History</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                                            {% else %}
+                                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
+                                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
+                                            {% endif %}
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="navbar-toggler show order-1 order-lg-4">
+                                <a href="{% url 'cart' %}">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="row text-center" id="delivery-banner">
+                        <div class="col">
+                            <h5>Free shipping when you spend over £{{ free_shipping_threshold }}</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarSearch">
-                    <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                        <input class="form-control me-2" type="search" name="q" placeholder="Search your happiness"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success btn-search" type="submit">Search</button>
-                    </form>
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAccount"
-                    aria-controls="navbarAccount" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-user"></i>
-                </button>
-                <div class="collapse navbar-collapse order-2 order-lg-3" id="navbarAccount">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="accountDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                My Account
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new product</a></li>
-                                    {% endif %}
-                                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile & Order History</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                                {% else %}
-                                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
-                                {% endif %}
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <button class="navbar-toggler show order-1 order-lg-4">
-                    <a href="{% url 'cart' %}">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </button>
-            </div>
-        </nav>
-        <div class="row text-center" id="delivery-banner">
-            <div class="col">
-                <h5>Free shipping when you spend over £{{ free_shipping_threshold }}</h5>
             </div>
         </div>
     </header>
@@ -144,83 +150,95 @@
             {% endfor %}
         </div>
     {% endif %}
-
-    {% block content %}
-    {% endblock %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-1">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <hr>
-        <div class="container text-center">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <a href="#">
-                        <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto mx-lg-0 mb-4">
-                    </a>
-                    <p>Happiness Junkie is the creative side hustle of a hairstylist and mom of two. I make foil
-                        prints, stickers and knits!</p>
-                </div>
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-6 col-md-3">
-                            <h1>WEBSITE</h1>
-                            <a href="#" class="footer-link d-block">Prints</a>
-                            <a href="#" class="footer-link d-block">Stickers</a>
-                            <a href="#" class="footer-link d-block">Knits</a>
+                <div class="col-lg-10 offset-1">
+                    <hr>
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="#">
+                                    <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto mx-lg-0 mb-4">
+                                </a>
+                                <p>Happiness Junkie is the creative side hustle of a hairstylist and mom of two. I make foil
+                                    prints, stickers and knits!</p>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row mb-4">
+                                    <div class="col-6 col-md-3">
+                                        <h1>WEBSITE</h1>
+                                        <a href="#" class="footer-link d-block">Prints</a>
+                                        <a href="#" class="footer-link d-block">Stickers</a>
+                                        <a href="#" class="footer-link d-block">Knits</a>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <h1>ACCOUNT</h1>
+                                        {% if request.user.is_authenticated %}
+                                            {% if request.user.is_superuser %}
+                                                <a class="footer-link d-block" href="{% url 'add_product' %}">Add a new product</a>
+                                            {% endif %}
+                                                <a class="footer-link d-block" href="{% url 'profile' %}">Profile & Order History</a>
+                                                <a class="footer-link d-block" href="{% url 'account_logout' %}">Logout</a>
+                                        {% else %}
+                                                <a class="footer-link d-block" href="{% url 'account_signup' %}">Sign Up</a>
+                                                <a class="footer-link d-block" href="{% url 'account_login' %}">Log in</a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <h1 class="mb-4">FIND US ON SOCIAL</h1>
+                                        <div>
+                                            <a href="">
+                                                <i class="fa-brands fa-facebook"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                            <a href="">
+                                                <i class="fa-brands fa-pinterest"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4" id="newsletter-form">
+                                    <div class="col col-lg-6 offset-lg-3">
+                                        <h1>NEWSLETTER</h1>
+                                        <p>Sign up for a weekly newsletter for updates on our latest items</p>
+                                        <form class="row">
+                                            <div class="col-9 col-md-4 offset-md-3 col-lg-5 offset-lg-1 pe-0">
+                                                <input type="email" class="form-control" id="inputEmail"
+                                                    placeholder="Enter your email">
+                                            </div>
+                                            <div class="col-3 ps-0">
+                                                <button type="submit" class="btn">SIGNUP</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                            <h1>ACCOUNT</h1>
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a class="footer-link d-block" href="{% url 'add_product' %}">Add a new product</a>
-                                {% endif %}
-                                    <a class="footer-link d-block" href="{% url 'profile' %}">Profile & Order History</a>
-                                    <a class="footer-link d-block" href="{% url 'account_logout' %}">Logout</a>
-                            {% else %}
-                                    <a class="footer-link d-block" href="{% url 'account_signup' %}">Sign Up</a>
-                                    <a class="footer-link d-block" href="{% url 'account_login' %}">Log in</a>
-                            {% endif %}
-                        </div>
-                        <div class="col-sm-12 col-md-6 mt-4">
-                            <h1 class="mb-4">FIND US ON SOCIAL</h1>
-                            <div>
-                                <a href="">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa-brands fa-pinterest"></i>
-                                </a>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <p>© 2022 All rights reserved.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4" id="newsletter-form">
-                        <div class="col">
-                            <h1>NEWSLETTER</h1>
-                            <p>Sign up for a weekly newsletter for updates on our latest items</p>
-                            <form class="row">
-                                <div class="col-9 pe-0">
-                                    <input type="email" class="form-control" id="inputEmail"
-                                        placeholder="Enter your email">
-                                </div>
-                                <div class="col-3 ps-0">
-                                    <button type="submit" class="btn">SIGNUP</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <p>© 2022 All rights reserved.</p>
                 </div>
             </div>
         </div>

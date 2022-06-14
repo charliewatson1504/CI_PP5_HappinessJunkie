@@ -69,6 +69,7 @@ a {
 #delivery-banner {
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    margin: 0;
 }
 
 /* 3. Buttons */
@@ -123,8 +124,7 @@ a {
 #hero-section {
     background: url(/static/img/hero_image.jpg) no-repeat center;
     background-size: cover;
-    width: 100vw;
-    height: 350px;
+    height: 50vh;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -139,11 +139,11 @@ a {
 }
 
 #hero-section div h1 {
-    font-size: 9vw;
+    font-size: 2.5rem;
 }
 
 #hero-section div p {
-    font-size: 5vw;
+    font-size: 1.5rem;
 }
 
 
