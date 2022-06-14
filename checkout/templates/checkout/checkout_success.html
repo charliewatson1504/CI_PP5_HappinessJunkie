@@ -54,7 +54,7 @@
                                 {{ item.product.friendly_name }}
                                 {% if item.product_zodiac_style %}
                                  - Zodiac Sign {{ item.product_zodiac_style }}
-                                {% if item.product_foil_print_color %}
+                                {% elif item.product_foil_print_color %}
                                  - Foil Print Color {{ item.product_foil_print_color }}
                                 {% endif %}
                             </p>
@@ -187,14 +187,14 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-custom rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'blog' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'blog' %}" class="btn btn-custom rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>
