@@ -139,16 +139,11 @@ a {
 }
 
 #hero-section div h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 #hero-section div p {
-    font-size: 1.5rem;
-}
-
-
-#hero-section div a {
-    content: '\00bb';
+    font-size: 2rem;
 }
 
 #blog-section {
