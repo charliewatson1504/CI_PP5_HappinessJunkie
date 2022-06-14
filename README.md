@@ -51,8 +51,54 @@
 
 ## User Stories
 
-### User
-1. As a **User** I can ** ** so that ** **
+Epic 1 - Core Functionality:
+
+1. As a **user** I can **experience the site on mobile or desktop** so that **I can have the same experience whether on the go or at home**
+2. As a **user** I can **navigate the site intuitively** so that **I can have an enjoyable experience and see all that is offered by the site**
+3. As a **user** I can **access all parts of the site through a navigation bar or footer links** so that **I can view all content of the site**
+4. As a **user** I can **receive feedback from the site when I interact with the site** so that **I know if there are any issues or confirmations when using the **site functions
+
+Epic 2 - Products:
+
+5. As a **user** I can **view all products** so that **I can see all that the store has on offer to buy**
+6. As a **user** I can **filter products into categories** so that **I can only view products that I want to see**
+7. As a **user** I can **see if the products have any variations** so that **I can get the exact product I want**
+8. As a **user** I can **add a product to a wish list** so that **I can save products I like for a future purchase**
+
+Epic 3 - Orders/Cart:
+
+9. As a **user** I can **view all items added to the cart** so that **make any amendments I wish to make**
+10. As a **user** I can **purchase the items in the cart using my payment card**
+11. As a **user** I can **get confirmation/error messages when interacting with the cart** so that **I am aware if there are any issues or payment has been taken successfully**
+
+Epic 4 - Admin Functionality:
+
+12. As an **admin user** I can **add/update/delete products from the store** so that **the store is kept up to date**
+13. As an **admin user** I can **log in to the backend admin site** so that **I can manage any potential issues**
+14. As an **admin user** I can **log in on the frontend and make changes to products** so that **the store is kept up to date**
+
+Epic 5 - User Account:
+
+15. As a **user** I can **register for an account** so that **I can save delivery information and order history**
+16. As a returning user I can **log in to my account and view order history and/or update saved delivery detail**
+17. As a **user** I can **clearly see if I am logged in or not**
+18. As a **user** I can **reset my password via if I forget it** so that **I can use my account without having to wait for an admin to do it manually**
+19. As an **admin user** only I can **see admin functions that a standard user shouldn't be able to access** so that **changes to the site can only be performed by the site staff**
+20. As a **user** I can **have my account information auto-populated when logged in** so that **I don't have to waste time typing out the information again**
+
+Epic 6 - Exhibition Information:
+
+21. As a **user** I can **view blog posts on the site** so that **I am updated with what is happening with the business**
+22. As a **user** I can **comment on the blog posts** so that **I feel I am contributing to the sites community**
+23. As an **admin user** I can **add/update/delete blog posts** so that **the site can keep its community up to date with what it is doing**
+24. As an **admin user** I can **approve comments left by users** so that **checks are in place to keep in line with community guidelines, for example profanity**
+25. As a **user** I can **view blog posts without being logged in** so that **if I am viewing the site for the first time up-to-date information isn't hidden**
+
+Epic 7 - Marketing:
+
+26. As an **admin user** I have **created a Facebook business page to give the business a social presence to create engagement and boost the marketing of the site**
+27. As an **admin user** I have **researched search terms and keywords that are used within the site to boost the site's visibility on search engine websites**
+28. As a **user** I can **sign up to a newsletter** so that **I am kept up to date with the latest offerings from the store directly to my email inbox without having to visit the site**
 
 # Design Choices
 
