@@ -11,4 +11,5 @@ from . import views
 
 urlpatterns = [
     path('', views.all_posts, name='blog'),
+    path('<int:post_id>/', views.view_post, name='blog_post'),
 ]

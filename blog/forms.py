@@ -18,7 +18,7 @@ class PostForm(forms.ModelForm):
         fields = (
             'title',
             'image',
-            'blog_post_text'
+            'blog_post_text',
         )
 
     image = forms.ImageField(label='Image',
@@ -33,4 +33,4 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('body')
+        fields = ('body',)

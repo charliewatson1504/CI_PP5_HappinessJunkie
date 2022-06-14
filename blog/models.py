@@ -20,10 +20,14 @@ class Post(models.Model):
         max_length=250,
         unique=True
     )
-    user = models.ForeignKey(
+    author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
         related_name='blog_posts'
+    )
+    slug = models.SlugField(
+        max_length=250,
+        unique=True
     )
     image = models.ImageField(
         null=True,
