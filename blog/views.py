@@ -54,3 +54,15 @@ def add_blog_post(request):
             post = form.save()
             messages.success(request, 'Successfully created post')
             return redirect(reverse('blog_post', args=[post.id]))
+        else:
+            messages.error(
+                request, 'Post saving failed. Please check form is valid.'
+            )
+    else:
+        form = PostForm()
+
+    template = 'blog/add_blog_post.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
