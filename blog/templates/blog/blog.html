@@ -8,6 +8,13 @@
             <h1>Updates</h1>
         </div>
     </div>
+    {% if request.user.is_superuser %}
+    <div class="row">
+        <div class="col">
+            <a href="" class="btn btn.custom w-50 mx-auto"></a>
+        </div>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-12 mt-3 left">
             <div class="row">
