@@ -49,7 +49,7 @@
                                                         Zodiac Sign: {{ item.product.zodiac_style }}
                                                     {% elif item.product.foil_print_color %}
                                                         Foil Print Color: {{ item.product.foil_print_color }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                    {% endif %}{{ item.product.friendly_name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
                                         </ul>
