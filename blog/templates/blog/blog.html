@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -11,7 +12,7 @@
     {% if request.user.is_superuser %}
     <div class="row">
         <div class="col">
-            <a href="" class="btn btn.custom w-50 mx-auto"></a>
+            <a href="{% url 'add_blog_post' %}" class="btn btn-custom">Add a new post</a>
         </div>
     </div>
     {% endif %}
