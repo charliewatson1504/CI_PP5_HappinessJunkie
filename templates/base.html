@@ -60,19 +60,8 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="productsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                All Products
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                                <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
-                                <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price
-                                        <i class="fa-solid fa-arrow-up-right"></i></a></li>
-                                <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price
-                                        <i class="fa-solid fa-arrow-down-right"></i></a>
-                                </li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}">All Products</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="categoriesDropdown" role="button"
@@ -113,7 +102,7 @@
                                     {% if request.user.is_superuser %}
                                         <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new product</a></li>
                                     {% endif %}
-                                    <li><a class="dropdown-item" href="">Profile & Order History</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}">Profile & Order History</a></li>
                                     <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
                                 {% else %}
                                     <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
@@ -176,11 +165,20 @@
                             <h1>WEBSITE</h1>
                             <a href="#" class="footer-link d-block">Prints</a>
                             <a href="#" class="footer-link d-block">Stickers</a>
+                            <a href="#" class="footer-link d-block">Knits</a>
                         </div>
                         <div class="col-6 col-md-3">
                             <h1>ACCOUNT</h1>
-                            <a href="#" class="footer-link d-block">Prints</a>
-                            <a href="#" class="footer-link d-block">Stickers</a>
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a class="footer-link d-block" href="{% url 'add_product' %}">Add a new product</a>
+                                {% endif %}
+                                    <a class="footer-link d-block" href="{% url 'profile' %}">Profile & Order History</a>
+                                    <a class="footer-link d-block" href="{% url 'account_logout' %}">Logout</a>
+                            {% else %}
+                                    <a class="footer-link d-block" href="{% url 'account_signup' %}">Sign Up</a>
+                                    <a class="footer-link d-block" href="{% url 'account_login' %}">Log in</a>
+                            {% endif %}
                         </div>
                         <div class="col-sm-12 col-md-6 mt-4">
                             <h1 class="mb-4">FIND US ON SOCIAL</h1>
@@ -229,7 +227,8 @@
     </footer>
 
     {% block postloadjs %}
-    <!-- Thanks to pmeeny at code institute for updated script to show toasts in bootstrap 5 -->
+    <!-- Thanks to pmeeny MS4 project from code institute 
+        for updated script to show toasts in bootstrap 5 -->
     <script type="text/javascript">
         let toastElList = [].slice.call(document.querySelectorAll('.toast'));
         let toastList = toastElList.map(function (toastEl) {
