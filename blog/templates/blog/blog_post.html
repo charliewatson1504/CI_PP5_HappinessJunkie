@@ -22,6 +22,14 @@
                 <p class="card-text ">
                     {{ post.blog_post_text }}
                 </p>
+                <p class="card-footer">
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_blog_post' post.id %}">Edit</a> | 
+                        <a class="text-danger" href="">Delete</a>
+                    </small>
+                {% endif %}
+                </p>
                 <div class="row">
                     <div class="col-1">
                         <strong class="text-secondary">

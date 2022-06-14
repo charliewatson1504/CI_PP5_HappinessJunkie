@@ -26,7 +26,7 @@
                                 <div class="image-container">
                                     <img class="card-img-top" src=" {{ post.image }}">
                                 </div>
-                                <a href="" class="post-link">
+                                <a href="{% url 'blog_post' post.id %}" class="post-link">
                                     <h2 class="card-title">{{ post.title }}</h2>
                                 </a>
                                 <p class="card-text text-muted h6">
