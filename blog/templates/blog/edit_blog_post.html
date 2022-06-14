@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="card mx-2 mt-3 p-3">
+    <h1>Add a blog post</h1>
+
+    <form action="{% url 'edit_blog_post' post.id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% for field in form %}
+            {% if field.name != 'image' %} 
+                {{field | as_crispy_field }}
+            {% else %}
+                {{ field }}
+            {% endif %}
+        {% endfor %}
+
+        <a href="{% url 'blog' %}" class="btn btn-dark rounded-0">Cancel</a>
+        <button type="submit" class="btn btn-custom rounded-0">Update Blog Post</button>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script type="text/javascript">
+    $("#new-image").change(function () {
+        var file = $("#new-image")[0].files[0];
+        $("#filename").text(`Image will be set to: ${file.name}`);
+    });
+    </script>
+{% endblock %}
