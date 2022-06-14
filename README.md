@@ -104,7 +104,10 @@ Epic 7 - Marketing:
 
 ## Colors
 
-![Colour Pallette](#)
+![Colour Pallette](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/color-pallet/color-pallet.png)
+
+The color scheme was taken from the colors found in the hero image
+
 ## Fonts
 
 ## Wireframes
