@@ -110,12 +110,13 @@ The color scheme was taken from the colors found in the hero image
 
 ## Fonts
 
-## Wireframes
-The wireframes for the site were created in Figma and are linked below for Desktop, Tablet and Mobile devices.
-### Homepage
-1. <details><summary>Desktop</summary><img src="#"></details>
-2. <details><summary>Tablet</summary><img src="#"></details>
-3. <details><summary>Mobile</summary><img src="#"></details>
+I have used Roboto as the body text and Abril Fatface for the headers. Both fonts are from google fonts and compliment well. Sans-serif is in place as a backup should the browser not be able to load the primary fonts.
+
+## Database
+### Physical database model
+The below diagram shows all of the fields stored in the database, with details of their data types, and how it is structured.
+
+![Database]()
 
 # Technologies Used
 ## Languages
