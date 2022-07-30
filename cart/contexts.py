@@ -37,7 +37,7 @@ def cart_contents(request):
             })
         else:
             if zodiac_style:
-                product = get_object_or_404(Product, pk-item_id)
+                product = get_object_or_404(Product, pk=item_id)
                 for zodiac_style, quantity in item_data['items_by_zodiac_style'].items():
                     total += quantity * product.price
                     product_count += quantity
@@ -48,7 +48,7 @@ def cart_contents(request):
                         'zodiac_style': zodiac_style,
                     })
             else:
-                product = get_object_or_404(Product, pk-item_id)
+                product = get_object_or_404(Product, pk=item_id)
                 for foil_print_color, quantity in item_data['items_by_foil_print_color'].items():
                     total += quantity * product.price
                     product_count += quantity
