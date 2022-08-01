@@ -69,7 +69,7 @@ def add_blog_post(request):
 
 
 @login_required
-def edit_blog_post(request):
+def edit_blog_post(request, post_id):
     """
     Allows editing of a blog post by a superuser
     """
