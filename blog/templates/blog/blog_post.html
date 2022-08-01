@@ -43,8 +43,9 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <a href="{% url 'delete_blog_post' post.id %}"></a><button type="button"
-                                    class="btn btn-danger">Delete</button>
+                                <a href="{% url 'delete_blog_post' post.id %}">
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                </a>
                             </div>
                         </div>
                     </div>
