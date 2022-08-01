@@ -10,7 +10,7 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src=" {{ post.image }}" width="100%">
+                <img src="{{MEDIA_URL}}{{ post.image }}" width="100%">
             </div>
         </div>
     </div>
@@ -26,41 +26,44 @@
                 <p class="card-footer">
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
-                        <a href="{% url 'edit_blog_post' post.id %}">Edit</a> | 
-                        <a class="text-danger pointer" data-bs-toggle="modal" data-bs-target="#deletePostModal">Delete</a>
+                        <a href="{% url 'edit_blog_post' post.id %}">Edit</a> |
+                        <a class="text-danger pointer" data-bs-toggle="modal"
+                            data-bs-target="#deletePostModal">Delete</a>
                     </small>
-                    <div class="modal fade" id="deletePostModal" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
+                <div class="modal fade" id="deletePostModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title">Remove {{ post.title }}</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h5 class="modal-title">Remove {{ post.title }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              <p>Are you sure you want to remove {{ post.title }}?</p>
+                                <p>Are you sure you want to remove {{ post.title }}?</p>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{% url 'delete_blog_post' post.id %}"></a><button type="button" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <a href="{% url 'delete_blog_post' post.id %}"></a><button type="button"
+                                    class="btn btn-danger">Delete</button>
                             </div>
-                          </div>
                         </div>
-                      </div>  
+                    </div>
+                </div>
                 {% endif %}
                 </p>
                 <div class="row">
                     <div class="col-1">
                         <strong class="text-secondary">
-                            <i class="far fa-heart"></i> 
-                            {{ post.number_of_likes }} 
+                            <i class="far fa-heart"></i>
+                            {{ post.number_of_likes }}
                         </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
-                            <strong class="text-secondary">
-                                <i class="far fa-comments"></i>
-                                {{ total_comments }}
-                            </strong>
+                        <strong class="text-secondary">
+                            <i class="far fa-comments"></i>
+                            {{ total_comments }}
+                        </strong>
                         {% endwith %}
                     </div>
                 </div>
