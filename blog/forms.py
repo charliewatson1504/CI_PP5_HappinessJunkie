@@ -19,7 +19,11 @@ class PostForm(forms.ModelForm):
             'title',
             'image',
             'blog_post_text',
+            'status',
         )
+        widgets = {
+            'status': forms.Select(attrs={'id': 'status'})
+        }
 
     image = forms.ImageField(label='Image',
                              required=False,
