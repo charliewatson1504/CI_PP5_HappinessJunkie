@@ -162,10 +162,22 @@
             {% for review in reviews %}
             <p>Star Rating: {{ review.star_rating | format_rating }}</p>
             <p>Review: {{ review.review_text }}</p>
+            {% if review.is_recommended is not None %}
+            <p>
+                Would you recommend this product to a friend?
+                {% if review.is_recommended == True %}
+                <strong>Yes 👍</strong>
+                {% else %}
+                <strong>No 👎</strong>
+                {% endif %}
+            </p>
+            {% endif %}
             <hr>
             {% endfor %}
             {% endif %}
-            {% if request.user.is_authenticated %}
+            {% if is_product_reviewed %}
+            <p><strong>{{ user }}</strong> - thank you for reviewing this product 😁</p>
+            {% elif request.user.is_authenticated %}
             <form action="{% url 'add_a_review' product.id %}" method="POST">
                 {% csrf_token %}
                 {{ review_form|crispy }}
