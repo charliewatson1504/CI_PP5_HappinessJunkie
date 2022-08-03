@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    {% if not request.user.is_superuser %}
+    <h1>This page is for store owners only</h1>
+    <a href="{% url 'home' %}" class="btn btn-custom">Home</a>
+    {% else %}
+    <div class="row">
+        <div class="col text-center">
+            <h1>Manage Draft Posts</h1>
+        </div>
+    </div>
+    <div class="row mb-1">
+        <div class="col">
+            <a href="{% url 'add_blog_post' %}" class="btn btn-custom">Add a new post</a>
+        </div>
+    </div>
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-4">
+            <div class="card mb-1 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text text-muted h6">
+                        {{ post.created_on}}
+                    </p>
+                    <a href="{% url 'edit_blog_post' post.id %}" class="btn btn-primary">Edit</a>
+                    <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletePostModal">Delete</a>
+                    <div class="modal fade" id="deletePostModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Remove {{ post.title }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to remove {{ post.title }}?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <a href="{% url 'delete_blog_post' post.id %}">
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
