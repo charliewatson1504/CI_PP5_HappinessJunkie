@@ -17,4 +17,6 @@ urlpatterns = [
          name='delete_product'),
     path('add_a_review/<int:product_id>/',
          views.add_a_review, name='add_a_review'),
+    path('delete_a_review/<int:product_id>/<int:review_id>/',
+         views.delete_a_review, name='delete_a_review'),
 ]
