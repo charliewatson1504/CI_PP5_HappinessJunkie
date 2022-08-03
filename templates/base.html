@@ -16,7 +16,8 @@
     {% endblock %}
 
     {% block core_css %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href=" {% static 'css/base.css'%}">
     {% endblock %}
 
@@ -25,9 +26,14 @@
 
     {% block core_js %}
     <script src="https://kit.fontawesome.com/de2e36d79b.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -45,19 +51,21 @@
                 <div class="col-lg-10 offset-1">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <i class="fa-solid fa-bars"></i>
                             </button>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
-                                aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle search">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false"
+                                aria-label="Toggle search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-            
+
                             <a class="navbar-brand me-0 me-lg-1" href="#">
                                 <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto">
                             </a>
-            
+
                             <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
@@ -72,25 +80,49 @@
                                             Categories
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=knits">Knits</a></li>
-                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=foil_prints">Foil
+                                            <li><a class="dropdown-item"
+                                                    href="{% url 'products' %}?category=knits">Knits</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="{% url 'products' %}?category=foil_prints">Foil
                                                     Prints</a></li>
-                                            <li><a class="dropdown-item" href="{% url 'products' %}?category=stickers">Stickers</a>
+                                            <li><a class="dropdown-item"
+                                                    href="{% url 'products' %}?category=stickers">Stickers</a>
                                             </li>
                                         </ul>
                                     </li>
+                                    {% if request.user.is_superuser %}
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" id="categoriesDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Blog Posts
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                            <li><a class="dropdown-item" href="{% url 'blog' %}">View Blog Posts</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="{% url 'manage_posts' %}">Manage Draft
+                                                    Posts</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'add_blog_post' %}">Add new
+                                                    post</a></li>
+                                        </ul>
+                                    </li>
+                                    {% else %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'blog' %}">Blog Posts</a>
+                                    </li>
+                                    {% endif %}
                                 </ul>
                             </div>
                             <div class="collapse navbar-collapse order-4 order-lg-2" id="navbarSearch">
                                 <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                                    <input class="form-control me-2" type="search" name="q" placeholder="Search your happiness"
-                                        aria-label="Search">
+                                    <input class="form-control me-2" type="search" name="q"
+                                        placeholder="Search your happiness" aria-label="Search">
                                     <button class="btn btn-outline-success btn-search" type="submit">Search</button>
                                 </form>
                             </div>
-            
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAccount"
-                                aria-controls="navbarAccount" aria-expanded="false" aria-label="Toggle navigation">
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarAccount" aria-controls="navbarAccount" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <i class="fa-solid fa-user"></i>
                             </button>
                             <div class="collapse navbar-collapse order-2 order-lg-3" id="navbarAccount">
@@ -102,18 +134,23 @@
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="accountDropdown">
                                             {% if request.user.is_authenticated %}
-                                                {% if request.user.is_superuser %}
-                                                    <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new product</a></li>
-                                                {% endif %}
-                                                <li><a class="dropdown-item" href="{% url 'profile' %}">Profile & Order History</a></li>
-                                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                                            {% else %}
-                                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a></li>
-                                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a></li>
+                                            {% if request.user.is_superuser %}
+                                            <li><a class="dropdown-item" href="{% url 'add_product' %}">Add a new
+                                                    product</a></li>
                                             {% endif %}
+                                            <li><a class="dropdown-item" href="{% url 'profile' %}">Profile & Order
+                                                    History</a></li>
+                                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                                             </li>
-                                        </ul>
+                                            {% else %}
+                                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Sign Up</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Log in</a>
+                                            </li>
+                                            {% endif %}
                                     </li>
+                                </ul>
+                                </li>
                                 </ul>
                             </div>
                             <button class="navbar-toggler show order-1 order-lg-4">
@@ -134,23 +171,23 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
-    
+
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-1">
@@ -171,7 +208,8 @@
                                 <a href="#">
                                     <img src="{% static 'img/logo.jpeg' %}" alt="" class="mx-auto mx-lg-0 mb-4">
                                 </a>
-                                <p>Happiness Junkie is the creative side hustle of a hairstylist and mom of two. I make foil
+                                <p>Happiness Junkie is the creative side hustle of a hairstylist and mom of two. I make
+                                    foil
                                     prints, stickers and knits!</p>
                             </div>
                             <div class="col-lg-9">
@@ -185,14 +223,16 @@
                                     <div class="col-6 col-md-3">
                                         <h1>ACCOUNT</h1>
                                         {% if request.user.is_authenticated %}
-                                            {% if request.user.is_superuser %}
-                                                <a class="footer-link d-block" href="{% url 'add_product' %}">Add a new product</a>
-                                            {% endif %}
-                                                <a class="footer-link d-block" href="{% url 'profile' %}">Profile & Order History</a>
-                                                <a class="footer-link d-block" href="{% url 'account_logout' %}">Logout</a>
+                                        {% if request.user.is_superuser %}
+                                        <a class="footer-link d-block" href="{% url 'add_product' %}">Add a new
+                                            product</a>
+                                        {% endif %}
+                                        <a class="footer-link d-block" href="{% url 'profile' %}">Profile & Order
+                                            History</a>
+                                        <a class="footer-link d-block" href="{% url 'account_logout' %}">Logout</a>
                                         {% else %}
-                                                <a class="footer-link d-block" href="{% url 'account_signup' %}">Sign Up</a>
-                                                <a class="footer-link d-block" href="{% url 'account_login' %}">Log in</a>
+                                        <a class="footer-link d-block" href="{% url 'account_signup' %}">Sign Up</a>
+                                        <a class="footer-link d-block" href="{% url 'account_login' %}">Log in</a>
                                         {% endif %}
                                     </div>
                                     <div class="col-sm-12 col-md-6">
@@ -250,16 +290,16 @@
     <script type="text/javascript">
         let toastElList = [].slice.call(document.querySelectorAll('.toast'));
         let toastList = toastElList.map(function (toastEl) {
-        let option = {
-            animation: true,
-            autohide: true,
-            delay: 6000,
-        };
-        let bsToast = new bootstrap.Toast(toastEl, option);
-        bsToast.show();
+            let option = {
+                animation: true,
+                autohide: true,
+                delay: 6000,
+            };
+            let bsToast = new bootstrap.Toast(toastEl, option);
+            bsToast.show();
         });
     </script>
-    
+
     <!-- Personal JS -->
     <script src="{% static 'js/email.js' %}"></script>
     {% endblock %}
