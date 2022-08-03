@@ -34,9 +34,11 @@ class ProductReviewForm(forms.ModelForm):
         fields = (
             'star_rating',
             'review_text',
+            'is_recommended',
         )
 
         widgets = {
             'star_rating': forms.Select(attrs={'id': 'star_rating'}),
             'review_text': forms.Textarea(attrs={'rows': 4}),
+            'is_recommended': forms.Select(attrs={'id': 'is_recommended'}),
         }
