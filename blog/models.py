@@ -47,14 +47,14 @@ class Post(models.Model):
         choices=STATUS,
         default=0
     )
-    likes = models.ManyToManyField(
+    upvotes = models.ManyToManyField(
         User,
-        related_name='blogpost_like',
+        related_name='blogpost_upvotes',
         blank=True
     )
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-upvotes']
 
     def __str__(self):
         return self.title
