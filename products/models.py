@@ -99,7 +99,7 @@ class Review(models.Model):
     )
 
     review_text = models.TextField(
-        verbose_name=_('Review Text'),
+        verbose_name=('Review Text'),
         max_length=255,
         null=False,
         blank=False

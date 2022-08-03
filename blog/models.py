@@ -3,6 +3,7 @@
 # 3rd party:
 from django.db import models
 from django.contrib.auth.models import User
+from stripe import Order
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,17 +51,15 @@ class Post(models.Model):
     upvotes = models.ManyToManyField(
         User,
         related_name='blogpost_upvotes',
-        blank=True
+        blank=True,
+        default=0
     )
-
-    class Meta:
-        ordering = ['-upvotes']
 
     def __str__(self):
         return self.title
 
-    def number_of_likes(self):
-        return self.likes.count()
+    def number_of_upvotes(self):
+        return self.upvotes.count()
 
 
 class Comment(models.Model):
