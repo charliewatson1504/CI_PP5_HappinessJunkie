@@ -4,7 +4,7 @@
 from django import forms
 
 # Internal:
-from .models import Category, Product
+from .models import Category, Product, Review
 from .widgets import CustomClearableFileInput
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,3 +26,17 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+
+class ProductReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = (
+            'star_rating',
+            'review_text',
+        )
+
+        widgets = {
+            'star_rating': forms.Select(attrs={'id': 'star_rating'}),
+            'review_text': forms.Textarea(attrs={'rows': 4}),
+        }
