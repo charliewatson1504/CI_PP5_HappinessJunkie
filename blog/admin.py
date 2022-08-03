@@ -26,10 +26,9 @@ class CommentAdmin(admin.ModelAdmin):
     Admin class for comment model
     """
     list_display = (
-        'name',
+        'user',
         'post',
         'created_on',
-        'approved',
     )
 
 
