@@ -1,15 +1,16 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import get_object_or_404, redirect, render, reverse
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from django.urls import reverse
 
 # Internal:
-from .models import Category, Product
-from .forms import ProductForm
+from .models import Category, Product, Review
+from .forms import ProductForm, ProductReviewForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -74,6 +75,23 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+def average_star_rating(reviews):
+    rounded_average = 0
+    number_of_reviews = 0
+    sum_of_star_ratings = 0
+
+    for review in reviews:
+        number_of_reviews = number_of_reviews + 1
+        sum_of_star_ratings = sum_of_star_ratings + review.star_rating
+
+    if number_of_reviews > 0:
+        average = (sum_of_star_ratings / number_of_reviews)
+        rounded_average = int(round(average, 1))
+        return rounded_average
+    else:
+        return rounded_average
+
+
 def product_detail(request, product_id):
     """
     View to show product detail page for selected product
@@ -85,9 +103,18 @@ def product_detail(request, product_id):
         Render of the product detail page
     """
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product).order_by('-created_on')
+    number_of_reviews = reviews.count()
+    review_form = ProductReviewForm(data=request.POST or None)
+    rounded_average = average_star_rating(reviews)
+    Product.objects.filter(id=product.id).update(star_rating=rounded_average)
 
     context = {
         'product': product,
+        'review_form': review_form,
+        'reviews': reviews,
+        'number_of_reviews': number_of_reviews,
+        'rounded_average': rounded_average,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -188,3 +215,32 @@ def delete_product(request, product_id):
     messages.success(request, 'Product has been successfully removed!')
 
     return redirect(reverse('products'))
+
+
+@login_required
+def add_a_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        product_review_form = ProductReviewForm(request.POST)
+
+        if product_review_form.is_valid():
+            is_product_reviewed = Review.objects.filter(id=product_id,
+                                                        user=request.user)
+            if not is_product_reviewed:
+                Review.objects.create(
+                    user=request.user,
+                    product=product,
+                    star_rating=request.POST['star_rating'],
+                    review_text=request.POST['review_text']
+                )
+            else:
+                messages.error(
+                    request,
+                    f'{request.user}, you have already left a review for this product.'
+                )
+
+            return redirect(reverse('product_detail', args=[product.id]))
+
+        messages.error(request, 'Something went wrong, failed to a review')
+    messages.error(request, 'Something went wrong, invalid method')
+    return redirect(reverse('product_detail', args=[product.id]))
