@@ -7,6 +7,8 @@ from django_countries.fields import CountryField
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 
+from products.models import Product
+
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,3 +69,17 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class FavouritedItem(models.Model):
+    """
+    Class for user favourited items.
+    """
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE
+    )
+    product = models.ManyToManyField(
+        Product,
+        blank=True
+    )
