@@ -6,13 +6,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
-            <h1>Updates</h1>
+            <h1>Happiness Junkie Blog</h1>
         </div>
     </div>
     {% if request.user.is_superuser %}
     <div class="row">
         <div class="col">
             <a href="{% url 'add_blog_post' %}" class="btn btn-custom">Add a new post</a>
+            <a href="{% url 'manage_posts' %}" class="btn btn-custom">Manage draft blog posts</a>
         </div>
     </div>
     {% endif %}
