@@ -3,7 +3,7 @@
 # 3rd party:
 from django.db import models
 from django.contrib.auth.models import User
-from stripe import Order
+
 
 # Internal:
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,6 +17,9 @@ class Post(models.Model):
     Model for blog posts
     """
 
+    class Meta:
+        ordering = ['-created_on']
+
     title = models.CharField(
         max_length=250,
         unique=True
@@ -28,10 +31,6 @@ class Post(models.Model):
     )
     author = models.CharField(
         max_length=80
-    )
-    slug = models.SlugField(
-        max_length=250,
-        unique=True
     )
     image = models.ImageField(
         null=True,
