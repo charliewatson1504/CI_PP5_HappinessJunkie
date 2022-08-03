@@ -82,6 +82,12 @@ class Review(models.Model):
         (5, '5')
     ]
 
+    RECOMMENDED_CHOICES = [
+        (True, 'Yes'),
+        (False, 'No'),
+        (None, ' '),
+    ]
+
     user = models.ForeignKey(
         User,
         null=True,
@@ -103,6 +109,14 @@ class Review(models.Model):
         max_length=255,
         null=False,
         blank=False
+    )
+
+    is_recommended = models.BooleanField(
+        verbose_name=('Would you recommend this to a friend?'),
+        default=None,
+        null=True,
+        blank=True,
+        choices=RECOMMENDED_CHOICES
     )
 
     created_on = models.DateTimeField(
