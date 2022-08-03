@@ -248,3 +248,22 @@ def add_a_review(request, product_id):
         messages.error(request, 'Something went wrong, failed to a review')
     messages.error(request, 'Something went wrong, invalid method')
     return redirect(reverse('product_detail', args=[product.id]))
+
+
+@login_required
+def delete_a_review(request, product_id, review_id):
+    product = get_object_or_404(Product, pk=product_id)
+    review = get_object_or_404(Review, pk=review_id)
+
+    if request.user.is_superuser:
+
+        if request.method == 'POST':
+            review.delete()
+            messages.info(request, 'Review has been deleted successfully')
+        else:
+            messages.error(request, 'Error deleting review, please try again')
+    else:
+        messages.error(request,
+                       f'{request.user} - only store owners are able to remove reviews.')
+        return redirect(reverse('home'))
+    return redirect(reverse('product_detail', args=[product.id]))
