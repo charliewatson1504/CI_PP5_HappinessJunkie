@@ -25,6 +25,21 @@ def all_posts(request):
     return render(request, template, context)
 
 
+def manage_blog_posts(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Only store owners can view this page.')
+        return redirect(reverse('blog'))
+
+    posts = Post.objects.filter(status=0).order_by('-created_on')
+
+    template = 'blog/manage_posts.html'
+    context = {
+        'posts': posts,
+    }
+
+    return render(request, template, context)
+
+
 def view_post(request, post_id):
     """
     View selected blog post
