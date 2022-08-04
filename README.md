@@ -268,7 +268,7 @@ The application has been built with the thought of it being viewing on various d
 |---|---|---|---| 
 |Open products page|Click on shop button on homepage|Products page loads with listed products available|Works as expected|
 
-<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-2.pdf"></details>
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-2.png"></details>
 
 ### 3. As a **user** I can **access all parts of the site through a navigation bar or footer links** so that **I can view all content of the site**
 
@@ -276,7 +276,7 @@ The application has been built with the thought of it being viewing on various d
 |---|---|---|---| 
 |Use navbar to navigate pages|Open homepage and click on all products link in navbar|Products page loads with listed products available|Works as expected|
 
-<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.pdf"></details>
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.png"></details>
 
 ### 4. As a **user** I can **receive feedback from the site when I interact with the site** so that **I know if there are any issues or confirmations when using the site functions**
 
@@ -284,7 +284,7 @@ The application has been built with the thought of it being viewing on various d
 |---|---|---|---| 
 |Login success message|Open homepage and click on my account link in navbar. Then select login from the dropdown menu. Enter login information and press sign in. Success message will be displayed |Success message displayed when correct credentials are used|Works as expected|
 
-<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.pdf"></details>
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-4.png"></details>
 
 # Deployment
 ## Creating an Application with Heroku
