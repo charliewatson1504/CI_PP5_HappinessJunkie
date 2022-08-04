@@ -26,9 +26,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if post.image %}
-                                <img src="{{MEDIA_URL}}{{ post.image }}" height="100">
+                                <img src="{{MEDIA_URL}}{{ post.image }}" height="100" alt="{{ post.title }}">
                                 {% else %}
-                                <img src="{% static 'img/noimage.png' %}" height="100">
+                                <img src="{% static 'img/noimage.png' %}" height="100" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'blog_post' post.id %}" class="post-link">
