@@ -115,17 +115,20 @@
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
+                                                <span class="hidden">Decrease</span>
                                             </span>
                                         </button>
                                     </div>
                                     <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
+                                        name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                        title="quantity">
                                     <div class="input-group-append">
                                         <button
                                             class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
+                                                <span class="hidden">Increase</span>
                                             </span>
                                         </button>
                                     </div>
