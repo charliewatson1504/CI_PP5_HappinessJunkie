@@ -276,6 +276,8 @@ The application has been built with the thought of it being viewing on various d
 |---|---|---|---| 
 |Use navbar to navigate pages|Open homepage and click on all products link in navbar|Products page loads with listed products available|Works as expected|
 
+Covers user story 5 also.
+
 <details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.png"></details>
 
 ### 4. As a **user** I can **receive feedback from the site when I interact with the site** so that **I know if there are any issues or confirmations when using the site functions**
@@ -285,6 +287,38 @@ The application has been built with the thought of it being viewing on various d
 |Login success message|Open homepage and click on my account link in navbar. Then select login from the dropdown menu. Enter login information and press sign in. Success message will be displayed |Success message displayed when correct credentials are used|Works as expected|
 
 <details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-4.png"></details>
+
+### 6. As a **user** I can **filter products into categories** so that **I can only view products that I want to see**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Filter products based on category|Open homepage and click on categories link in navbar. Then select Foil Prints from the dropdown menu. | Only products in the foil prints category will be displayed|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-6.png"></details>
+
+### 7. As a **user** I can **see if the products have any variations** so that **I can get the exact product I want**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Select a variation for a product|Open homepage and click on categories link in navbar. Then select Foil Prints from the dropdown menu. Select the Ironman Quote Foil Print| Product deails page is displayed with the option to select a foil print color|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-7.png"></details>
+
+### 9. As a **user** I can **view all items added to the cart** so that **make any amendments I wish to make**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|View cart once items have been added|Open homepage and click on categories link in navbar. Then select Foil Prints from the dropdown menu. Select the Ironman Quote Foil Print. Click on the add to cart button then on the cart button at the far right of the navigation bar| Cart page is displayed with the products that have been added|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-9.png"></details>
+
+### 10. As a **user** I can **purchase the items in the cart using my payment card**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Purchase items that have been added to the cart|Open homepage and click on categories link in navbar. Then select Foil Prints from the dropdown menu. Select the Ironman Quote Foil Print. Click on the add to cart button then on the cart button at the far right of the navigation bar. Now click the secure checkout button and fill in required details. Finally click complete ordered and purchase will be processed| Thank you page is displayed with the transaction details for the order|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-10.png"></details>
 
 # Deployment
 ## Creating an Application with Heroku
