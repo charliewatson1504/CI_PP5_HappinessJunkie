@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /profiles/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /products/add/
+Sitemap: https://happiness-junkie.herokuapp.com/sitemap.xml
