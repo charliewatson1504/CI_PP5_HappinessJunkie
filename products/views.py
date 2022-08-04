@@ -107,8 +107,7 @@ def product_detail(request, product_id):
     number_of_reviews = reviews.count()
     review_form = ProductReviewForm(data=request.POST or None)
     rounded_average = average_star_rating(reviews)
-    is_product_reviewed = Review.objects.filter(product=product,
-                                                user=request.user)
+
     Product.objects.filter(id=product.id).update(star_rating=rounded_average)
 
     context = {
@@ -117,7 +116,6 @@ def product_detail(request, product_id):
         'reviews': reviews,
         'number_of_reviews': number_of_reviews,
         'rounded_average': rounded_average,
-        'is_product_reviewed': is_product_reviewed,
     }
 
     return render(request, 'products/product_detail.html', context)

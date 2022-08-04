@@ -83,6 +83,7 @@
                             </select>
                         </div>
                         {% endif %}
+                        {% endwith %}
                         {% with product.has_foil_print_color as f %}
                         {% if f %}
                         <div class="col-12">
@@ -103,6 +104,7 @@
                             </select>
                         </div>
                         {% endif %}
+                        {% endwith %}
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
@@ -140,8 +142,6 @@
                             <input type="submit" class="btn btn-custom text-uppercase mt-5" value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        {% endwith %}
-                        {% endwith %}
                     </div>
                 </form>
             </div>
@@ -201,10 +201,7 @@
             <hr>
             {% endfor %}
             {% endif %}
-
-            {% if is_product_reviewed %}
-            <p><strong>{{ user }}</strong> - thank you for reviewing this product 😁</p>
-            {% elif request.user.is_authenticated %}
+            {% if request.user.is_authenticated %}
             <form action="{% url 'add_a_review' product.id %}" method="POST">
                 {% csrf_token %}
                 {{ review_form|crispy }}
