@@ -99,7 +99,28 @@
                     </p>
                 </div>
                 {% if user.is_superuser %}
-                <button>delete comment</button>
+                <a class="text-danger pointer" data-bs-toggle="modal" data-bs-target="#deleteCommentModal">Delete
+                    Comment</a>
+                <div class="modal fade" id="deleteCommentModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Remove comment</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to remove comment?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <a href="{% url 'delete_comment' comment.id %}">
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endif %}
                 <hr>
                 {% endfor %}

@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.urls import reverse
 
 # Internal:
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm, PostForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -159,3 +159,11 @@ def delete_blog_post(request, post_id):
     messages.success(request, 'Post has been successfully removed!')
 
     return redirect(reverse('blog'))
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment.delete()
+    messages.success(request, 'Comment has been successfully removed!')
+    return redirect(reverse('blog_post', args=[comment.blog_post_id]))
