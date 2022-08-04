@@ -62,7 +62,10 @@ def view_post(request, post_id):
             return redirect(reverse('blog_post', args=[post.id]))
         else:
             messages.error(
-                request, 'Something went wrong with your comment submission, please try again')
+                request,
+                'Something went wrong with your comment submission,\
+                     please try again'
+            )
             return redirect(reverse('blog_post', args=[post.id]))
     else:
         comment_form = CommentForm()

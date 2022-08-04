@@ -145,7 +145,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Product creation failed. Please check form is valid.')
+                request, 'Product creation failed. \
+                    Please check form is valid.')
     else:
         form = ProductForm()
 
@@ -238,7 +239,8 @@ def add_a_review(request, product_id):
             else:
                 messages.error(
                     request,
-                    f'{request.user}, you have already left a review for this product.'
+                    f'{request.user}, \
+                        you have already left a review for this product.'
                 )
 
             return redirect(reverse('product_detail', args=[product.id]))
@@ -262,6 +264,7 @@ def delete_a_review(request, product_id, review_id):
             messages.error(request, 'Error deleting review, please try again')
     else:
         messages.error(request,
-                       f'{request.user} - only store owners are able to remove reviews.')
+                       f'{request.user} - \
+                        only store owners are able to remove reviews.')
         return redirect(reverse('home'))
     return redirect(reverse('product_detail', args=[product.id]))

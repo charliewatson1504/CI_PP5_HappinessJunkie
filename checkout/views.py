@@ -81,7 +81,8 @@ def checkout(request):
                         order_line_item.save()
                     else:
                         if product.has_zodiac_style:
-                            for zodiac_style, quantity in item_data['item_by_zodiac_style'].items():
+                            for zodiac_style, quantity in\
+                                    item_data['item_by_zodiac_style'].items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,
@@ -90,7 +91,9 @@ def checkout(request):
                                 )
                                 order_line_item.save()
                         else:
-                            for foil_print_color, quantity in item_data['item_by_foil_print_color'].items():
+                            for foil_print_color, quantity in\
+                                item_data['item_by_foil_print_color']\
+                                    .items():
                                 order_line_item = OrderLineItem(
                                     order=order,
                                     product=product,

@@ -55,45 +55,56 @@ def add_product_to_cart(request, item_id):
                 cart[item_id]['item_by_zodiac_style'][zodiac_style] += quantity
                 messages.success(
                     request,
-                    f'Updated {zodiac_style} {product.friendly_name} quantity to {cart[item_id]["item_by_zodiac_style"][zodiac_style]}',
+                    f'Updated\
+                         {zodiac_style} {product.friendly_name} quantity to \
+                            {cart[item_id]["item_by_zodiac_style"][zodiac_style]}',
                 )
             else:
                 cart[item_id]['item_by_zodiac_style'][zodiac_style] = quantity
                 messages.success(
                     request,
-                    f'Added {zodiac_style} {product.friendly_name} to your cart',
+                    f'Added {zodiac_style} {product.friendly_name} to\
+                         your cart',
                 )
         else:
             cart[item_id] = {'item_by_zodiac_style': {zodiac_style: quantity}}
             messages.success(
-                request, f'Added {zodiac_style} {product.friendly_name} to your cart'
+                request, f'Added {zodiac_style} {product.friendly_name}\
+                     to your cart'
             )
     elif foil_print_color is not None:
         if item_id in list(cart.keys()):
-            if foil_print_color in cart[item_id]['item_by_foil_print_color'].keys():
-                cart[item_id]['item_by_foil_print_color'][foil_print_color] += quantity
+            if foil_print_color in cart[item_id]['item_by_foil_print_color']\
+                    .keys():
+                cart[item_id]['item_by_foil_print_color'][foil_print_color]\
+                    += quantity
                 messages.success(
                     request,
-                    f'Updated {foil_print_color} {product.friendly_name} quantity to {cart[item_id]["item_by_foil_print_color"][foil_print_color]}',
+                    f'Updated {foil_print_color} {product.friendly_name}\
+                         quantity to {cart[item_id]["item_by_foil_print_color"][foil_print_color]}',
                 )
             else:
-                cart[item_id]['item_by_foil_print_color'][foil_print_color] = quantity
+                cart[item_id]['item_by_foil_print_color'][foil_print_color]\
+                    = quantity
                 messages.success(
                     request,
-                    f'Added {foil_print_color} {product.friendly_name} to your cart',
+                    f'Added {foil_print_color} {product.friendly_name} to\
+                         your cart',
                 )
         else:
             cart[item_id] = {'item_by_foil_print_color': {
                 foil_print_color: quantity}}
             messages.success(
                 request,
-                f'Added {foil_print_color} {product.friendly_name} to your cart',
+                f'Added {foil_print_color} {product.friendly_name} to\
+                     your cart',
             )
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
             messages.success(
-                request, f'Updated {product.friendly_name} quantity to {cart[item_id]}'
+                request, f'Updated {product.friendly_name} quantity\
+                     to {cart[item_id]}'
             )
         else:
             cart[item_id] = quantity
@@ -131,7 +142,8 @@ def adjust_cart(request, item_id):
             cart[item_id]['item_by_zodiac_style'][zodiac_style] = quantity
             messages.success(
                 request,
-                f'Updated {zodiac_style} {product.friendly_name} quantity to {cart[item_id]["item_by_zodiac_style"][zodiac_style]}',
+                f'Updated {zodiac_style} {product.friendly_name} quantity\
+                     to {cart[item_id]["item_by_zodiac_style"][zodiac_style]}',
             )
         else:
             del cart[item_id]['item_by_zodiac_style'][zodiac_style]
@@ -139,14 +151,17 @@ def adjust_cart(request, item_id):
                 cart.pop(item_id)
             messages.success(
                 request,
-                f'Removed {zodiac_style} {product.friendly_name} from your cart',
+                f'Removed {zodiac_style} {product.friendly_name} from\
+                     your cart',
             )
     elif foil_print_color:
         if quantity > 0:
-            cart[item_id]['item_by_foil_print_color'][foil_print_color] = quantity
+            cart[item_id]['item_by_foil_print_color'][foil_print_color]\
+                = quantity
             messages.success(
                 request,
-                f'Updated {foil_print_color} {product.friendly_name} quantity to {cart[item_id]["item_by_foil_print_color"][foil_print_color]}',
+                f'Updated {foil_print_color} {product.friendly_name}\
+                     quantity to {cart[item_id]["item_by_foil_print_color"][foil_print_color]}',
             )
         else:
             del cart[item_id]['item_by_foil_print_color'][foil_print_color]
@@ -154,13 +169,15 @@ def adjust_cart(request, item_id):
                 cart.pop(item_id)
             messages.success(
                 request,
-                f'Removed {foil_print_color} {product.friendly_name} from your cart',
+                f'Removed {foil_print_color} {product.friendly_name}\
+                     from your cart',
             )
     else:
         if quantity > 0:
             cart[item_id] = quantity
             messages.success(
-                request, f'Updated {product.friendly_name} quantity to {cart[item_id]}'
+                request, f'Updated {product.friendly_name} quantity\
+                     to {cart[item_id]}'
             )
         else:
             cart.pop(item_id)
@@ -197,11 +214,13 @@ def remove_from_cart(request, item_id):
                 cart.pop(item_id)
             messages.success(
                 request,
-                (f'Removed {zodiac_style}' f'{product.friendly_name} from your cart'),
+                (f'Removed {zodiac_style}' f'{product.friendly_name}\
+                     from your cart'),
             )
         elif foil_print_color:
             del cart[item_id]['items_by_foil_print_color'][foil_print_color]
-            if not cart[item_id]['items_by_foil_print_color'][foil_print_color]:
+            if not cart[item_id]['items_by_foil_\
+                    print_color'][foil_print_color]:
                 cart.pop(item_id)
             messages.success(
                 request,

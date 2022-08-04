@@ -41,7 +41,8 @@ def cart_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             if product.has_zodiac_style:
-                for zodiac_style, quantity in item_data['item_by_zodiac_style'].items():
+                for zodiac_style, quantity in item_data['item_by_zodiac_style\
+                        '].items():
                     total += quantity * product.price
                     product_count += quantity
                     cart_items.append(
