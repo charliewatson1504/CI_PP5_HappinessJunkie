@@ -253,6 +253,16 @@ I started the project with completing test driven development and saw a real ben
 
 ![cover_report](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/coverage_report.png)
 
+## Testing of User Stories
+### 1. As a **user** I can **experience the site on mobile or desktop** so that **I can have the same experience whether on the go or at home**
+
+The application has been built with the thought of it being viewing on various devices. Below are screenshots of the different medias:
+
+<details><summary>Screenshot to show user story test - mobile</summary><img src=""></details>
+<details><summary>Screenshot to show user story test - tablet</summary><img src=""></details>
+<details><summary>Screenshot to show user story test - desktop</summary><img src=""></details>
+
+
 # Deployment
 ## Creating an Application with Heroku
 
@@ -287,6 +297,7 @@ In the Deploy tab:
 - YouTube for many tutorial videos on different javascript aspects.
 - w3school and mdn web docs for a great resource when stuck with how to get a specific piece of javascript code to work.
 - stackoverflow for various issues along the way
+- unsplash for the blog post images
 
 # Acknowledgements
 My family for supporting throughout this process
