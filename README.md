@@ -29,11 +29,13 @@ Happiness Junkie is an ecommerce store for a business that sells handmade knits,
 - [Design Choices](#design-choices)
   * [Colors](#colors)
   * [Fonts](#fonts)
+  * [Wireframes](#wireframes)
   * [Database](#database)
     + [Physical database model](#physical-database-model)
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)
   * [Frameworks, libraries and other tools](#frameworks--libraries-and-other-tools)
+- [Validation](#validation)
 - [Testing](#testing)
 - [Deployment](#deployment)
   * [Creating an Application with Heroku](#creating-an-application-with-heroku)
@@ -62,6 +64,13 @@ Happiness Junkie is an ecommerce store for a business that sells handmade knits,
 
 - To add, edit and delete PT sessions
 - To add, edit and delete website news and events information
+
+### Business Model
+This is a business to customer application based on a side business that my wife is setting up. The site offers handmade items giving that local feel whilst offering the items globally. The materials are bought from wholesale and assembled by staff to be shipped to customers.
+
+The business has a facebook page, [screenshot here if unavailable to view directly](https://www.facebook.com/github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/mockup/facebook-screenshot.png), which can be access via the link in the footer of the site.
+
+The site has a sitemap.xml generated to be used in conjunction with the robots.txt file. Meta tags and semantic markup have been implemented in the site.
 
 ## User Stories
 
@@ -182,7 +191,7 @@ Used for creating a responsive navigation bar used in every header of each page.
 Used for creating the wireframes
 
 # Validation
-## HTML Validation
+### HTML Validation
 [W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
 1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/index-html.png"></details>
 1. <details><summary>Blog</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/blog-html.png"></details>
@@ -195,12 +204,12 @@ Used for creating the wireframes
 1. <details><summary>Signup</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/signup-html.png"></details>
 
 
-## CSS Validation
+### CSS Validation
 [W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the site. The stylesheet.css file returned with 0 errors. When running on the whole page it returned with 15 errors all of which can be attributed to Bootstrap v5.0. See below link to screenshot:
 1. <details><summary>Whole Page</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/css/whole-page-css.png"></details>
 1. <details><summary>Base.css</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/css/base-css.png"></details>
 
-## Accessibility Validation
+### Accessibility Validation
 [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors. Click on the below to see each screenshot:
 1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/index-wave.png"></details>
 1. <details><summary>Blog Post</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/blog-post-wave.png"></details>
@@ -212,7 +221,7 @@ Used for creating the wireframes
 1. <details><summary>Signup</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/signup-wave.png"></details>
 
 
-## Pyhton - PEP8
+### Pyhton - PEP8
 [PEP8](http://pep8online.com) has been used to validate all of the python code within the site. All files have passed with 0 errors. Click on the below to see each screenshot:
 1. <details><summary>Blog - Forms</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-forms-pep8.png"></details>
 1. <details><summary>Blog - Models</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-models-pep8.png"></details>
@@ -239,7 +248,7 @@ Used for creating the wireframes
 1. <details><summary>Profiles - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/profiles-views-pep8.png"></details>
 
 
-## JavaScrtip - JSHint
+### JavaScript - JSHint
 [JSHint](https://jshint.com) has been used to validate all of the JavaScript code within the site. All files have passes with 0 errors. Click on the below to see each screenshot:
 1. <details><summary>email.js</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/emailjs-jshint.png"></details>
 1. <details><summary>Products Script</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/products-jshint.png"></details>
@@ -319,6 +328,19 @@ Covers user story 5 also.
 |Purchase items that have been added to the cart|Open homepage and click on categories link in navbar. Then select Foil Prints from the dropdown menu. Select the Ironman Quote Foil Print. Click on the add to cart button then on the cart button at the far right of the navigation bar. Now click the secure checkout button and fill in required details. Finally click complete ordered and purchase will be processed| Thank you page is displayed with the transaction details for the order|Works as expected|
 
 <details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-10.png"></details>
+
+# Bugs
+- Bug: Issue when placing order in checkout view.
+- Fix: Typing error in the env variables in heroku.
+- Bug: Issue when signing up for an account.
+- Fix: Incorrect variable names in environment.
+- Bug: Delete function not working on products or blog for admin users.
+- Fix: Modal delete link incorrectly wrapped in html file.
+- Bug: Images not loading for blog posts.
+- Fix: Missing {{MEDIA_URL}} tag from src path
+- Bug: Adding a product with a variation causing an internal server error.
+- Fix: Updated code in context.py and views.py - [see commit](https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/commit/f7d94b07c23564bd9565c7303dcc1036fff2e477)
+
 
 # Deployment
 ## Creating an Application with Heroku
