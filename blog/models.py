@@ -65,7 +65,7 @@ class Comment(models.Model):
     """
     Model for blog comments
     """
-    post = models.ForeignKey(
+    blog_post = models.ForeignKey(
         Post,
         on_delete=models.CASCADE,
         related_name='comments'

@@ -1,13 +1,14 @@
 # Imports
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from django.shortcuts import get_object_or_404, redirect, render, reverse
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import reverse
 
 # Internal:
-from .models import Post, Comment
-from .forms import PostForm
+from .models import Post
+from .forms import CommentForm, PostForm
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -45,10 +46,34 @@ def view_post(request, post_id):
     View selected blog post
     """
     post = get_object_or_404(Post, pk=post_id)
+    comments = post.comments.filter(blog_post=post_id).order_by('-created_on')
+    number_of_comments = comments.count()
+
+    comment = None
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.blog_post = post
+            comment.user = request.user
+            comment.save()
+
+            messages.info(request, 'Comment submitted successfully')
+            return redirect(reverse('blog_post', args=[post.id]))
+        else:
+            messages.error(
+                request, 'Something went wrong with your comment submission, please try again')
+            return redirect(reverse('blog_post', args=[post.id]))
+    else:
+        comment_form = CommentForm()
 
     template = 'blog/blog_post.html'
     context = {
         'post': post,
+        'comment_form': comment_form,
+        'comments': comments,
+        'comment': comment,
+        'number_of_comments': number_of_comments,
     }
 
     return render(request, template, context)
