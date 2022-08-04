@@ -278,6 +278,14 @@ The application has been built with the thought of it being viewing on various d
 
 <details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.pdf"></details>
 
+### 4. As a **user** I can **receive feedback from the site when I interact with the site** so that **I know if there are any issues or confirmations when using the site functions**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Login success message|Open homepage and click on my account link in navbar. Then select login from the dropdown menu. Enter login information and press sign in. Success message will be displayed |Success message displayed when correct credentials are used|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.pdf"></details>
+
 # Deployment
 ## Creating an Application with Heroku
 
