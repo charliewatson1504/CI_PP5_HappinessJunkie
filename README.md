@@ -126,6 +126,33 @@ The color scheme was taken from the colors found in the hero image
 
 I have used Roboto as the body text and Abril Fatface for the headers. Both fonts are from google fonts and compliment well. Sans-serif is in place as a backup should the browser not be able to load the primary fonts.
 
+## Wireframes
+The wireframes for the site were created in Figma and are linked below for Desktop, Tablet and Mobile devices.
+### Homepage
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/index.pdf"></details>
+
+### Blog
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/blog.pdf"></details>
+
+### Blog Post
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/blog_post.pdf"></details>
+
+
+### Product Detail
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/product_detail.pdf"></details>
+
+
+### Products
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/products.pdf"></details>
+
+
+### Profile Page
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/profile_page.pdf"></details>
+
+### Shopping Cart
+<details><summary>Desktop/Tablet/Mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/wireframes/shopping_cart.pdf"></details>
+
+
 ## Database
 ### Physical database model
 The below diagram shows all of the fields stored in the database, with details of their data types, and how it is structured.
