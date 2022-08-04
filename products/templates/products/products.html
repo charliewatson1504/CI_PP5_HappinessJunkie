@@ -14,8 +14,7 @@
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper">
-                        <select id="sort-selector"
-                            class="custom-select custom-select-sm rounded border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting=='None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if current_sorting=='price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting=='price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -29,11 +28,9 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span><a href="{% url 'products' %}" class=" btn btn-outline-dark btn-sm">Products Home</a> |
-                        </span>
+                        <span><a href="{% url 'products' %}" class=" btn btn-outline-dark btn-sm">Products Home</a> | </span>
                         {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term
-                            }}"</strong>{% endif %}
+                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
