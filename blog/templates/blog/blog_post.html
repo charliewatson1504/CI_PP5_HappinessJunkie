@@ -85,35 +85,36 @@
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
+                <div>
+                    <p>
+                        <strong>
+                            {{ comment.user }}
+                        </strong>
+                        <span class="muted">
+                            on {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    {{ comment.body | linebreaks }}
+                    <p>
+                        {{ comment.body }}
+                    </p>
                 </div>
+                {% if user.is_superuser %}
+                <button>delete comment</button>
+                {% endif %}
+                <hr>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
                 {% if user.is_authenticated %}
-
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
+                <form method="POST" style="margin-top: 1.3em;">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    {{ comment_form | crispy }}
+                    <button type="submit" class="btn btn-custom">Submit</button>
                 </form>
-                {% endif %}
                 {% endif %}
             </div>
         </div>
