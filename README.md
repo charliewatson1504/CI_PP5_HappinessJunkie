@@ -178,9 +178,73 @@ Used for Spectral font throughout the site
 Used for various icons throughout the site
 - [Bootstrap](https://getbootstrap.com/)
 Used for creating a responsive navigation bar used in every header of each page. Also used for creting a modal for a booking form used on each page. Modals were used for services page in which an accordion was created using bootstrap for each service category. Bootstrap also used for creating a carousel for the review section
-- [jQuery](https://jquery.com/)
-Used for cleaner JavaScript code where necessary and datepicker function for booking form
-- [Google Maps](https://www.google.com/maps)
+- [Figma](https://www.figma.com/)
+Used for creating the wireframes
+
+# Validation
+## HTML Validation
+[W3c Markup Validation Service](https://validator.w3.org/) has been used to validate all of the HTML code within the site. All pages have passed with 0 errors and 0 warnings. Click on the below to see each screenshot:
+1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/index-html.png"></details>
+1. <details><summary>Blog</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/blog-html.png"></details>
+1. <details><summary>Blog Post</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/blog-post-html.png"></details>
+1. <details><summary>Checkout</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/checkout-html.png"></details>
+1. <details><summary>Login</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/login-html.png"></details>
+1. <details><summary>Product filtered on category</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/product-category-html.png"></details>
+1. <details><summary>Product Detail</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/product-detail-html.png"></details>
+1. <details><summary>Products</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/products-html.png"></details>
+1. <details><summary>Signup</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/html/signup-html.png"></details>
+
+
+## CSS Validation
+[W3c CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the site. The stylesheet.css file returned with 0 errors. When running on the whole page it returned with 15 errors all of which can be attributed to Bootstrap v5.0. See below link to screenshot:
+1. <details><summary>Whole Page</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/css/whole-page-css.png"></details>
+1. <details><summary>Base.css</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/css/base-css.png"></details>
+
+## Accessibility Validation
+[WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) has been used to validate the site to the recognised standards when it comes to accessibility. All pages have passed with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>Homepage</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/index-wave.png"></details>
+1. <details><summary>Blog Post</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/blog-post-wave.png"></details>
+1. <details><summary>Blog</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/blog-wave.png"></details>
+1. <details><summary>Cart</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/cart-wave.png"></details>
+1. <details><summary>Login</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/login-wave.png"></details>
+1. <details><summary>Product Detail</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/product-detail-wave.png"></details>
+1. <details><summary>Products</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/products-wave.png"></details>
+1. <details><summary>Signup</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/wave/signup-wave.png"></details>
+
+
+## Pyhton - PEP8
+[PEP8](http://pep8online.com) has been used to validate all of the python code within the site. All files have passed with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>Blog - Forms</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-forms-pep8.png"></details>
+1. <details><summary>Blog - Models</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-models-pep8.png"></details>
+1. <details><summary>Blog - URLS</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-urls-pep8.png"></details>
+1. <details><summary>Blog - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/blog-views-pep8.png"></details>
+1. <details><summary>Cart - Context</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/cart-context-pep8.png"></details>
+1. <details><summary>Cart - URLS</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/cart-urls-pep8.png"></details>
+1. <details><summary>Cart - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/cart-views-pep8.png"></details>
+1. <details><summary>Checkout - Forms</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-forms-pep8.png"></details>
+1. <details><summary>Checkout - Models</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-models-pep8.png"></details>
+1. <details><summary>Checkout - Signals</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-signals-pep8.png"></details>
+1. <details><summary>Checkout - URLS</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-urls-pep8.png"></details>
+1. <details><summary>Checkout - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-views-pep8.png"></details>
+1. <details><summary>Checkout - Webhook Handler</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-webhook-handler-pep8.png"></details>
+1. <details><summary>Checkout - Webhooks</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/checkout-webhooks-pep8.png"></details>
+1. <details><summary>Products - Forms</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/products-forms-pep8.png"></details>
+1. <details><summary>Products - Models</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/products-models-pep8.png"></details>
+1. <details><summary>Products - URLS</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/products-urls-pep8.png"></details>
+1. <details><summary>Products - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/products-views-pep8.png"></details>
+1. <details><summary>Products - Widgets</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/products-widgets-pep8.png"></details>
+1. <details><summary>Profiles - Forms</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/profiles-forms-pep8.png"></details>
+1. <details><summary>Profiles - Models</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/profiles-models-pep8.png"></details>
+1. <details><summary>Profiles - URLS</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/profiles-urls-pep8.png"></details>
+1. <details><summary>Profiles - Views</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/pep8/profiles-views-pep8.png"></details>
+
+
+## JavaScrtip - JSHint
+[JSHint](https://jshint.com) has been used to validate all of the JavaScript code within the site. All files have passes with 0 errors. Click on the below to see each screenshot:
+1. <details><summary>email.js</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/emailjs-jshint.png"></details>
+1. <details><summary>Products Script</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/products-jshint.png"></details>
+1. <details><summary>Quantity Input Script</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/quantity-input-jshint.png"></details>
+1. <details><summary>Toasts Script</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/validation/jshint/toasts-jshint.png"></details>
 
 
 # Testing
