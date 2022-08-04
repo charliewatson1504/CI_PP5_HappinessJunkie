@@ -153,14 +153,12 @@
                                             {% endif %}
                                     </li>
                                 </ul>
-                                </li>
-                                </ul>
                             </div>
-                            <button class="navbar-toggler show order-1 order-lg-4">
-                                <a href="{% url 'cart' %}">
+                            <a href="{% url 'cart' %}">
+                                <button class="navbar-toggler show order-1 order-lg-4">
                                     <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
-                            </button>
+                                </button>
+                            </a>
                         </div>
                     </nav>
                     <div class="row text-center" id="delivery-banner">
@@ -296,7 +294,7 @@
     {% block postloadjs %}
     <!-- Thanks to pmeeny MS4 project from code institute 
         for updated script to show toasts in bootstrap 5 -->
-    <script type="text/javascript">
+    <script>
         let toastElList = [].slice.call(document.querySelectorAll('.toast'));
         let toastList = toastElList.map(function (toastEl) {
             let option = {
