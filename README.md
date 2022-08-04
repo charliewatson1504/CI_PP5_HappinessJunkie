@@ -100,7 +100,7 @@ Epic 5 - User Account:
 19. As an **admin user** only I can **see admin functions that a standard user shouldn't be able to access** so that **changes to the site can only be performed by the site staff**
 20. As a **user** I can **have my account information auto-populated when logged in** so that **I don't have to waste time typing out the information again**
 
-Epic 6 - Exhibition Information:
+Epic 6 - Blog:
 
 21. As a **user** I can **view blog posts on the site** so that **I am updated with what is happening with the business**
 22. As a **user** I can **comment on the blog posts** so that **I feel I am contributing to the sites community**
@@ -258,10 +258,25 @@ I started the project with completing test driven development and saw a real ben
 
 The application has been built with the thought of it being viewing on various devices. Below are screenshots of the different medias:
 
-<details><summary>Screenshot to show user story test - mobile</summary><img src=""></details>
-<details><summary>Screenshot to show user story test - tablet</summary><img src=""></details>
-<details><summary>Screenshot to show user story test - desktop</summary><img src=""></details>
+<details><summary>Screenshot to show user story test - mobile</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-1-2.png"></details>
+<details><summary>Screenshot to show user story test - tablet</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-1-1.png"></details>
+<details><summary>Screenshot to show user story test - desktop</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-1-3.png"></details>
 
+### 2. As a **user** I can **navigate the site intuitively** so that **I can have an enjoyable experience and see all that is offered by the site**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Open products page|Click on shop button on homepage|Products page loads with listed products available|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-2.pdf"></details>
+
+### 3. As a **user** I can **access all parts of the site through a navigation bar or footer links** so that **I can view all content of the site**
+
+|Feature|Action|Expected Result|Actual Result|
+|---|---|---|---| 
+|Use navbar to navigate pages|Open homepage and click on all products link in navbar|Products page loads with listed products available|Works as expected|
+
+<details><summary>Screenshot to show user story test</summary><img src="https://github.com/charliewatson1504/CI_PP5_HappinessJunkie/blob/main/docs/testing/user-story-3.pdf"></details>
 
 # Deployment
 ## Creating an Application with Heroku
